@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='./img/9.png' />
+    <title>MT Rubik</title>
+    <link href="http://fonts.googleapis.com/css?family=Dynalight" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/sp.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="nav">
+                    <div class="logo">
+                        <img src="./img/2.png" alt="" class="logo_mobil-l show-mobile" width="50">
+                        <p class="neon logo_mobil-c">Minh Trí Rubik</p>
+                        <img src="./img/5.png" alt="" class="logo_mobil-r show-mobile" width="50">
+                    </div>
+
+                    <div class="contact">
+                        <ul class="contact-list">
+                            <li class="contact-item contact-cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Giỏ hàng
+                                <div class="giohang hide-on-mobile">
+                                    <img src="./img/nocart.png" alt="">
+                                    <p class="giohangtext">Chưa có sản phẩm</p>
+                                </div>
+                            </li>
+                            <li class="contact-item contact-user">
+                                <i class="fa-solid fa-user-large"></i>
+                                Tài khoản
+                                <div class="user">
+                                    <ul class="user-list">
+                                        <li class="user-item" data-bs-toggle="modal" data-bs-target="#dangnhap">
+                                            Tài khoản 
+                                            <i class="fa-solid fa-circle-user user-icon"></i>
+                                        </li>
+                                        <li class="user-item">
+                                            Địa chỉ
+                                            <i class="fa-solid fa-location-pin user-icon"></i>
+                                        </li>
+                                        <li class="user-item">
+                                            Đơn mua
+                                            <i class="fa-solid fa-chart-bar user-icon"></i>
+                                        </li>
+                                        <li class="user-item user-item-red">
+                                            Đăng xuất
+                                            <i class="fa-solid fa-right-from-bracket user-icon"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="contact-item">
+                                <label for="tim" class="nav__input">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    Tìm kiếm
+                                </label>
+                                <input hidden type="checkbox" class="nav__input" name="" id="tim">
+
+                                <div class="timkiem">
+                                    <input class="input" type="search" placeholder="Tìm kiếm ....">
+                                    <span class="input-span">
+                                        <i class="fa-solid fa-magnifying-glass input-span-icon"></i>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="grid-mobile shadow-sm show-mobile">
+            <div class="col-3 grid-mobile-col">
+                <div class="nav-mobile hide-on-tablet hide-on-pc">
+                    <input hidden type="checkbox" name="navmobile" id="navmobile" class="navmobile-check">
+                    <label for="navmobile" class="pointer"><i class="fa-solid fa-bars nav-mobile-bar"></i>Danh mục</label>
+                    <label for="navmobile" class="overlay"></label>
+                    <div class="mobile-menu hide-on-tablet hide-on-pc">
+                        <h3 class="category__heading">
+                            Danh mục sản phẩm
+                        </h3>
+                        <label for="navmobile" class="label-close"><i class="btn-close"></i></label>
+                        <div class="accordion accordion-mobile" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                        <h2 class="accordion-header category__iteam-active" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Rubik thông dụng
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body category__iteam">
+                                <a class="category__iteam-link">Rubik 3x3</a>
+                            </div>
+                        </div>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body category__iteam">
+                                <a class="category__iteam-link">Rubik 4x4</a>
+                            </div>
+                        </div>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body category__iteam">
+                                <a class="category__iteam-link">Rubik 5x5</a>
+                            </div>
+                        </div>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body category__iteam">
+                                <a class="category__iteam-link">Rubik 6x6</a>
+                            </div>
+                        </div>
+
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                        Rubik biến thể
+                                    </button>
+                            </h2>
+                            
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body category__iteam">
+                                    <a class="category__iteam-link">Rubik 7x7</a>
+                                </div>
+                            </div>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body category__iteam">
+                                    <a class="category__iteam-link">Rubik 8x8</a>
+                                </div>
+                            </div>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body category__iteam">
+                                    <a class="category__iteam-link">Rubik 9x9</a>
+                                </div>
+                            </div>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body category__iteam">
+                                    <a class="category__iteam-link">Rubik 10x10</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                    Rubik thi đấu
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body category__iteam">
+                                    <a href="#" class="category__iteam-link">Rubik sticker</a>
+                                </div>
+                            </div>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body category__iteam">
+                                    <a href="#" class="category__iteam-link">Rubik sticker-less</a>
+                                </div>
+                            </div>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body category__iteam">
+                                    <a href="#" class="category__iteam-link">Rubik cổ điển</a>
+                                </div>
+                            </div>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body category__iteam">
+                                    <a href="#" class="category__iteam-link">Rubik phức tạp</a>
+                                </div>
+                            </div>
+    
+                        </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-3 position-relative grid-mobile-col">
+                <label for="giohang" class="pointer position-relative">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                         <span class="header__cart-notice">2</span>
+                    Giỏ hàng
+                </label>
+                <input hidden type="checkbox" name="giohang" id="giohang" class="giohang-mobile-checkbox">
+                <label for="giohang" class="overlay2 hide-on-tablet hide-on-pc"></label>
+                <div class="giohang-mobile hide-on-tablet hide-on-pc">
+                    <div class="header__cart-list">
+                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                            <label for="giohang"><i class="btn-close giohang-close"></i></label>
+                            <ul class="header__cart-list-item">
+                            
+                                <li class="header__cart-item">
+                                    <img src="./img/22-Weipo-1-200x200.jpg" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name">Rubik 3x3x3 siêu mượt</h5>
+                                            <div class="deader__cart-item-price-wrap">
+                                                <span class="header__cart-item-price">130,000đ</span>
+                                                <span class="header__cart-item-multiply">x</span>
+                                                <span class="header__cart-item-qnt">2</span>
+                                            </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-description">
+                                                130,000đ
+                                            </span>
+                                            <span class="header__cart-item-remove">
+                                                Xóa
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="header__cart-item">
+                                    <img src="./img/44-Aosu-5-200x200.jpg" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                        <div class="header__cart-item-head">
+                                            <h5 class="header__cart-item-name">Rubik 4x4x4 siêu mượt</h5>
+                                            <div class="deader__cart-item-price-wrap">
+                                                <span class="header__cart-item-price">930,000đ</span>
+                                                <span class="header__cart-item-multiply">x</span>
+                                                <span class="header__cart-item-qnt">5</span>
+                                            </div>
+                                        </div>
+                                        <div class="header__cart-item-body">
+                                            <span class="header__cart-item-description">
+                                                130,000đ
+                                            </span>
+                                            <span class="header__cart-item-remove">
+                                                Xóa
+                                            </span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                        </ul>
+                        <a href="?quanly=giohang" class="header__cart-view-cart">Xem giỏ hàng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 position-relative grid-mobile-col">
+                <div class="dropdown">
+                    <div class="dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user-large nav-mobile-bar"></i>Tài khoản
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-mobile" aria-labelledby="dropdownMenu2">
+                        <li>
+                            <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#dangnhap">Đăng nhập</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#dangky">Đăng ký</button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" type="button">
+                                Đơn mua
+                            </button>
+                        </li>
+
+                            <li>
+                                <button class="dropdown-item user-item-red" type="button">
+                                    <a href="index.php?quanly=giohang&dangxuat=1" class="user-item-red">Đăng xuất</a>
+                                </button>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3 position-relative grid-mobile-col">
+                <label for="timk" class="nav__input">
+                    <i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm
+                </label>
+                <input type="checkbox" class="nav__input" name="" id="timk" hidden>
+                
+                <div class="timkiem">
+                    <form action="index.php?quanly=timkiem" method="POST">
+                        <input class="input" aria-label="Search" type="search" placeholder="Tìm kiếm ...." name="search_product" id="search_product" required>
+                        <button type="submit" class="input-span" name="search_button" id="search_button">
+                            <i class="fa-solid fa-magnifying-glass input-span-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).on('click', '.grid-mobile-col' , function(){
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+        </script>
+
+        
+        <div class="grid-mobile-bottom shadow-sm show-mobile">
+            <div class="col-3 align-items-center">
+                <div class="spinnerr"><i class="fa-brands fa-facebook grid-mobile-icon"></i> </div>
+            </div>
+            <div class="col-3 align-items-center">
+                <div class="spinnerr"><i class="fa-solid fa-phone grid-mobile-phone grid-mobile-icon"></i></div>
+            </div>
+            <div class="col-3 align-items-center">
+                <div class="spinnerr"><i class="fa-solid fa-message grid-mobile-mess grid-mobile-icon"></i></div>
+            </div>
+            <div class="col-3 align-items-center">
+                <div class="spinnerr"><i class="fa-brands fa-telegram grid-mobile-tele grid-mobile-icon"></i></div>
+            </div>
+        </div>
+       
+        <div class="container-fluid">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-12 col-12">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                Danh mục sản phẩm
+                            </h3>
+            
+                            <ul class="category__list">
+                                <li class="category__iteam category__iteam-active">
+                                   <a href="" class="category__iteam-link">Rubik thông dụng</a>
+                                </li>
+                                <li class="category__iteam">
+                                   <a href="" class="category__iteam-link">Rubik 2x2x2</a>
+                                </li>
+                                <li class="category__iteam">
+                                   <a href="" class="category__iteam-link">Rubik 3x3x3</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Rubik 4x4x4</a>
+                                 </li>
+                                <li class="category__iteam">
+                                   <a href="" class="category__iteam-link">Rubik 5x5x5</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Rubik 6x6x6</a>
+                                 </li>
+                                 <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Rubik 7x7x7</a>
+                                 </li>
+
+                                <li class="category__iteam category__iteam-active">
+                                    <a href="" class="category__iteam-link">Rubik biến thể</a>
+                                 </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Pyraminx</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Skewb Diamond</a>
+                                </li>
+                                <li class="category__iteam">
+                                     <a href="" class="category__iteam-link">Megamix</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Dogic</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Square -1</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Skewb Cube</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Mirror</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Snake</a>
+                                </li>
+                                
+
+                                <li class="category__iteam category__iteam-active">
+                                    <a href="" class="category__iteam-link">Rubik thi đấu</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Sticker</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Sticker-less</a>
+                                </li>
+                                <li class="category__iteam">
+                                     <a href="" class="category__iteam-link">Có nam châm</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Có phụ kiện đi kèm</a>
+                                </li>
+
+                                <li class="category__iteam category__iteam-active">
+                                    <a href="" class="category__iteam-link">Phụ Kiện Rubik</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Đế Kê Rubik Moyu (Giao Màu Ngẫu Nhiên)</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Thẻ Công Thức CFOP Qiyi0</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Hộp Đựng Rubik 3x3x3 Qiyi</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Bịt Mắt Một Màu Luyện Chơi Rubik Bịt Mắt (BLD)</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Bộ 3 Thẻ CFOP GAN Cứng ( Giống Thẻ ATM )</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Lube Moyu V2 5ml Tác Dụnh Nhanh</a>
+                                </li>
+                                <li class="category__iteam">
+                                    <a href="" class="category__iteam-link">Sticker Moyu Weilong GTS Full Fitted Zbright</a>
+                                </li>
+            
+                            </ul>
+                        </nav>
+
+                        <div class="boxhtml hide-on-mobile"></div>
+
+                        <div class="stars">
+                            <form action="">
+                                <input class="star-input star-input-5" id="star-5" type="radio" name="star"/>
+                                <label class="star-label star-label-5" for="star-5"></label>
+                                <input class="star-input star-input-4" id="star-4" type="radio" name="star"/>
+                                <label class="star-label star-label-4" for="star-4"></label>
+                                <input class="star-input star-input-3" id="star-3" type="radio" name="star"/>
+                                <label class="star-label star-label-3" for="star-3"></label>
+                                <input class="star-input star-input-2" id="star-2" type="radio" name="star"/>
+                                <label class="star-label star-label-2" for="star-2"></label>
+                                <input class="star-input star-input-1" id="star-1" type="radio" name="star"/>
+                                <label class="star-label star-label-1" for="star-1"></label>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-7 col-lg-7 col-md-8 col-sm-8 col-xs-12 col-12">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-12">
+                                    <div class="home-hotline">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <span class="span-home-hotline">
+                                            Hotline:
+                                        </span>
+                                    </div>
+                                    <div class="hotline-number">
+                                        0898303889 <br>
+                                        Zalo: 0898303889
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12 col-12">
+                                    <div class="home-news-sale">
+                                        <div class="title">
+                                            Tin Mới:
+                                        </div>
+                                        <marquee direction="left" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="3" scrolldelay="2">
+                                            <a class="title_link" href="https://rubikhanoi.vn/cach-giai-rubik-5x5x5-nhanh-nhat/">Cách giải rubik 5x5x5 nhanh nhất</a>   |
+                                            <a class="title_link" href="https://rubikhanoi.vn/cach-giai-rubik-3x3-nhanh/">Cách giải Rubik 3×3 nhanh</a>   |
+                                            <a class="title_link" href="https://rubikhanoi.vn/huong-dan-giai-rubik-4x4x4-cach-don-gian-nhat/">Hướng dẫn giải rubik 4x4x4 cách đơn giản nhất</a>   |
+                                            <a class="title_link" href="https://rubikhanoi.vn/huong-dan-xoay-rubik-3x3x3-don-gian-nhat/">Hướng dẫn xoay rubik 3x3x3 đơn giản nhất</a>   |
+                                        </marquee>
+                                    </div>
+                                </div>                            
+                            </div>
+
+                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="./img/bn1.jpg" class="d-block w-100" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="./img/bn2.jpg" class="d-block w-100" alt="">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            
+                            <div class="container">
+                                <h2>
+                                    <i class="fa-solid fa-cubes"></i>
+                                    Sản Phẩm
+                                    <img src="./img/hot.gif" alt="">
+                                </h2>
+                                <h5>Chúng tôi cung cấp sản phẩm Rubik chính hãng chất lượng tốt của các hãng Rubik hàng đầu thế giới.</h5>
+
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary nav-tabs-item" for="btnradio1">Sản phẩm nổi bật</label>
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary nav-tabs-item" for="btnradio2">Sản phẩm bán chạy</label>
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary nav-tabs-item nav-tabs-item-moi" for="btnradio3">Sản phẩm mới</label>
+                                </div>
+
+                                <div class="home-product">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten1.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                                <div class="home-product__item-hot">
+                                                    <span class="home-product__item-hot-chill">
+                                                        <img src="./img/aaaa.gif" alt="">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten2.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 6x6x6 Qiyi Shadown M Stickerless Có Nam Châm Cao Cấp</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten3.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Moyu Weilong GTS 3M Có Nam Châm Cao Cấp</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-hot">
+                                                    <span class="home-product__item-hot-chill">
+                                                        <img src="./img/aaaa.gif" alt="">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten4.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Moyu Weilong WRM 2021 Có Nam Châm Điều Chỉnh Cao Cấp Nhất</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten5.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Gan Monster Go AI Có Nam Châm Cao Cấp. Kết Nối Bluetooth Song Đấu Online</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-hot">
+                                                    <span class="home-product__item-hot-chill">
+                                                        <img src="./img/aaaa.gif" alt="">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten6.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Gan 11 Air 2021 M Ges Pro Có Nam Châm Cao Cấp</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                </fieldset>
+                                                
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <h2 id="moi">
+                                    <i class="fa-solid fa-cubes"></i>
+                                    Sản Phẩm Mới
+                                    <img src="./img/New.gif" alt="">
+                                </h2>
+
+                                <div class="home-product">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten7.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-new">
+                                                    <span class="home-product__item-new-chill">Mới</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten8.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 6x6x6 Qiyi Shadown M Stickerless Có Nam Châm Cao Cấp</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                                <div class="home-product__item-new">
+                                                    <span class="home-product__item-new-chill">Mới</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten9.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Moyu Weilong GTS 3M Có Nam Châm Cao Cấp</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-new">
+                                                    <span class="home-product__item-new-chill">Mới</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/conten10.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Moyu Weilong WRM 2021 Có Nam Châm Điều Chỉnh Cao Cấp Nhất</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                                <div class="home-product__item-new">
+                                                    <span class="home-product__item-new-chill">Mới</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/c1.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Gan Monster Go AI Có Nam Châm Cao Cấp. Kết Nối Bluetooth Song Đấu Online</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                                <div class="home-product__item-new">
+                                                    <span class="home-product__item-new-chill">Mới</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                            <div class="home-product__item">
+                                                <div class="home-product__item-img" style="background-image:url(./img/c2.jpg);"></div>
+                                                <h4 class="home-product__item-name">Rubik 3x3x3 Gan 11 Air 2021 M Ges Pro Có Nam Châm Cao Cấp</h4>
+                                                <div class="home-product__item-price">
+                                                    <span class="home-product__item-price-old">1.200.000</span>
+                                                    <span class="home-product__item-price-new">1.000.000</span>
+                                                </div>
+                                                <fieldset>
+                                                    <input type="submit" class="muahang" name="themgiohang" value="Mua hàng">
+                                                </fieldset>
+                                                <div class="home-product__item-sale">
+                                                    <span class="home-product__item-sale-chill">GIẢM</span>
+                                                </div>
+                                                <div class="home-product__item-new">
+                                                    <span class="home-product__item-new-chill">Mới</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- phân cách các trang -->
+                                <ul class="pagination home-product__pagination">
+                                    <li class="pagination-item">
+                                        <a href="" class="pagination-item__link">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="pagination-item pagination-item__link-acctive">
+                                        <a href="" class="pagination-item__link">
+                                            1
+                                        </a>
+                                    </li>
+
+                                    <li class="pagination-item">
+                                        <a href="" class="pagination-item__link">
+                                            2
+                                        </a>
+                                    </li>
+
+                                    <li class="pagination-item">
+                                        <a href="" class="pagination-item__link">
+                                            3
+                                        </a>
+                                    </li>
+
+                                    
+                                    <li class="pagination-item hide-on-mobile">
+                                        <a href="" class="pagination-item__link">
+                                            4
+                                        </a>
+                                    </li>
+                                    
+                                    <li class="pagination-item hide-on-mobile">
+                                        <a href="" class="pagination-item__link">
+                                            5
+                                        </a>
+                                    </li>
+
+                                    <li class="pagination-item">
+                                        <a href="" class="pagination-item__link">
+                                            ...
+                                        </a>
+                                    </li>
+
+                                    <li class="pagination-item">
+                                        <a href="" class="pagination-item__link">
+                                            14
+                                        </a>
+                                    </li>
+
+                                    <li class="pagination-item">
+                                        <a href="" class="pagination-item__link">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 hide-on-mobile-tablet">
+                        <div class="carousel-r1">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik 3x3x3
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten1.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten4.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten2.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten3.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten5.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten6.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten7.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten8.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="item">
+                                    <nav class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik 4x4x4
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-Aosu-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Aosu 5 Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-Aosu-6-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Moyu YanCong Deisgn Black Cao Cấp.Rất Tốt. Phiên Bản Giới Hạn
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-Aosu-GTSM-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-QY-Sail-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-QY-Sail-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Moyu Aosu Stickerless Cao Cấp. Siêu Bền
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-QY-Sail-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Moyu Aosu Stickerless Cao Cấp. Siêu Bền
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-Aosu-GTSM-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Moyu Aosu Stickerless Cao Cấp. Siêu Bền
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/44-QY-Sail-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 4x4x4 Moyu Aosu Stickerless Cao Cấp. Siêu Bền
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+    
+                                <div class="item">
+                                    <nav class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik 5x5x5
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Yuxin Black Kirin Stickerless
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-Bochuang-2-Copy-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5. Mofang Jiaoshi Meilong Stickerless
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-Bochuang-4-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    5x5x5 Yuxin Cloud Cực Tốt
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-Meilong-2-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>                                        
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Weichuang GTS White Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Bochuang GT Blue Cao Cấp Rất Tốt. Phiên Bản Giới Hạn
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-Weichuang-4-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Combo 2 + 3 + 4 + 5 Moyu Pink Cao Cấp Phiên Bản Giới Hạn
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-Wushuang-3-e1631477886179-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 YongJun MGC Stickerless Cao Cấp Có Nam Châm Tốt Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+    
+                                <div class="item">
+                                    <nav class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik 2x2x2
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-MF-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-MY-X-5-200x200 (1).jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-MY-X-5-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-Weipo-1-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-YX-CB-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-YX-LM-2-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/22-YX-CB-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 2x2x2 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/conten8.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 3x3x3 Moyu Weilong WR Có Nam Châm Cao Cấp Nhất
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            $('.owl-carousel').owlCarousel({
+                            loop:true,
+                            autoplay:true,
+                            autoplayTimeout:9000,
+                            dots:false,
+                            // margin:10,
+                            nav:true,
+                            navText:
+                            ['<i class="fa-solid fa-chevron-left nav-icon nav-icon-left"></i>',
+                            '<i class="fa-solid fa-chevron-right nav-icon nav-icon-right"></i>'],
+                            item:1,
+                            responsive:{
+                                0:{
+                                    items:1
+                                },
+                                600:{
+                                    items:1
+                                },
+                                1000:{
+                                    items:1
+                                }
+                            }
+                            })
+                        </script>
+
+                        <div class="carousel-r2">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <nav class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik biến thể
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Yuxin Black Kirin Stickerless
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5. Mofang Jiaoshi Meilong Stickerless
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    5x5x5 Yuxin Cloud Cực Tốt
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Weichuang GTS White Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Bochuang GT Blue Cao Cấp Rất Tốt. Phiên Bản Giới Hạn
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+    
+                                <div class="item">
+                                    <nav class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik Carbon
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Unequal 3x3x3 YongJun Đỏ
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Unequal 3x3x3 YongJun Xanh lá cây
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Magic xanh xanh
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Ball Puzzle Leisure Red
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Bochuang GT Blue Cao Cấp Rất Tốt. Phiên Bản Giới Hạn
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+    
+                                <div class="item">
+                                    <nav class="category-2">
+                                        <h3 class="category__heading">
+                                            Rubik Colors
+                                        </h3>
+    
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Yuxin Black Kirin Stickerless
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5. Mofang Jiaoshi Meilong Stickerless
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    5x5x5 Yuxin Cloud Cực Tốt
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Weichuang GTS White Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu Bochuang GT Blue Cao Cấp Rất Tốt. Phiên Bản Giới Hạn
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                
+                                            </div>
+                                        </div>
+                
+                                        <div class="row no-gutters row-magrin">
+                                            <div class="col-xl-4 col-lg-4">
+                                                <img src="./img/55-AC-T-3-200x200.jpg" alt="" width="100%" height="auto">
+                                            </div>
+                                            <div class="col-xl-8 col-lg-8">
+                                                <div class="right-text">
+                                                    Rubik 5x5x5 Moyu AoChuang GTS Có Nam Châm Cao Cấp
+                                                </div>
+                                                <div class="gia">
+                                                    <del class="giacu">350.000đ</del>
+                                                    <span class="giamoi">250.000đ</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <script>
+                            $('.owl-carousel').owlCarousel({
+                            loop:true,
+                            autoplay:true,
+                            autoplayTimeout:8500,
+                            dots:false,
+                            // margin:10,
+                            nav:true,
+                            navText:
+                            ['<i class="fa-solid fa-chevron-left nav-icon nav-icon-left"></i>',
+                            '<i class="fa-solid fa-chevron-right nav-icon nav-icon-right"></i>'],
+                            item:1,
+                            responsive:{
+                                0:{
+                                    items:1
+                                },
+                                600:{
+                                    items:1
+                                },
+                                1000:{
+                                    items:1
+                                }
+                            }
+                            })
+                        </script>
+
+                        <div class="auth-form hide-on-tablet">
+                            <div class="auth-form-header">
+                                Đăng nhập
+                            </div>
+                            <div class="auth-form__form">
+                                <div class="auth-form__group">
+                                    <input type="tel" class="auth-form__input" maxlength="11" placeholder=" ">
+                                    <lable for="sdt" class="auth-form__lable">Số điện thoại</lable>
+                                </div>
+                                <div class="auth-form__group">
+                                    <input type="text" class="auth-form__input" maxlength="50" placeholder=" ">
+                                    <lable for="ipnPassword" class="auth-form__lable">Email</lable>
+                                </div>
+                                <div class="auth-form__group">
+                                    <input class="auth-form__input" type="password" name="password" id="password" maxlength="20" placeholder=" ">
+                                   
+                                    <lable for="pass" class="auth-form__lable">Nhập mật khẩu</lable>
+                                    
+                                    <span id="showPassword">
+                                        <i class="fas fa-eye eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="auth-form__controls">
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+                                        <a href="#" class="auth-form-link__controls" data-bs-toggle="modal" data-bs-target="#dangky">
+                                            Bạn chưa có tải khoản ?
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+                                        <button class="auth-form-btn__controls">
+                                            Đăng nhập
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="business-hours">
+                            <span class="business-hours-span-1"></span>
+                            <span class="business-hours-span-2"></span>
+                            <span class="business-hours-span-3"></span>
+                            <span class="business-hours-span-4"></span>
+                            <p style="color : #04b591">
+                                <i class="hours-icon fa-regular fa-clock"></i>
+                                Giờ mở cửa: 8h-20h</p>
+                            <p style="color : #3db46e">
+                                <i class="hours-icon fa-solid fa-phone"></i>
+                                Hotline: 0898.303.889</p>
+                            <p style="color : #b43d9a">
+                                <i class="hours-icon fa-solid fa-file-word"></i>
+                                Hướng dẫn mua hàng</p>
+                            <p style="color : #791e65">
+                                <i class="hours-icon fa-solid fa-headphones"></i>
+                                Tư vấn trực tuyến</p>
+                            <p style="color : #ccb013">
+                                <i class="hours-icon fa-solid fa-money-check-dollar"></i>
+                                Mua hàng online</p>
+                            <p style="color : #374092">
+                                <i class="hours-icon fa-solid fa-rocket"></i>
+                                Giao hàng toàn quốc</p>
+                            <p style="color : #ff0000">
+                                <i class="hours-icon fa-brands fa-get-pocket"></i>
+                                Đăng ký</p>
+
+                            <div class="loader">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section_2 hide-on-mobile-tablet">
+            <iframe src="demo.html" frameborder="0" class="section-iframe"></iframe>
+        </section>
+        
+        <section class="section-html">
+            <div class="sectison-card">
+                <div class="sectison-thumb">
+                    <img src="./img/rubik 300x400.png" alt="">
+                </div>
+                <div class="sectison-desc">
+                    <h3>THÔNG TIN SẢN PHẨM</h3>
+                    <div class="sectison-name">RUBIK CUBE </div>
+                    <p>Rubik đa năng, phù hợp với mọi lứa tuổi, giải trí sau giờ học căng thẳng </p>
+                    <div class="sectison-size">Hệ điều hành :</div>
+                    <div class="sectison-list-size">
+                        <div class="sectison-item">Android</div>
+                        <div class="sectison-item">IOS</div>
+                        <div class="sectison-item">MacBook</div>
+                    </div>
+                    <div class="sectison-other-info">
+                        <span class="sectison-price">GIÁ : FREE</span>
+                        <button class="sectison-btn">Tải về</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectison-card sectison-cards">
+                <div class="sectison-thumb">
+                    <img src="./img/aorubik300x400.jpg" alt="">
+                </div>
+                <div class="sectison-desc">
+                    <h3>THÔNG TIN SẢN PHẨM</h3>
+                    <div class="sectison-name">ÁO THUN RUBIK </div>
+                    <p>Áo rộng, vải lụa thoáng mát, phù hợp cho mọi lứa tuổi, có thể mặt đi cháy phố rất đẹp </p>
+                    <div class="sectison-size">SIZE :</div>
+                    <div class="sectison-list-size">
+                        <div class="sectison-item-2">36</div>
+                        <div class="sectison-item-2">37</div>
+                        <div class="sectison-item-2">38</div>
+                        <div class="sectison-item-2">39</div>
+                        <div class="sectison-item-2">40</div>
+                    </div>
+                    <div class="sectison-other-info">
+                        <span class="sectison-price">GIÁ : 233$</span>
+                        <button class="sectison-btn">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section_content">
+                <aside>
+                    <h2 class="section_content-header">Sản phẩm</h2>
+                    <ul class="section_content-list">
+                        <li class="section_content-item">
+                            Rubik 2x2x2
+                            <span class="section_content-item-span">Dễ chơi</span>
+                            <img src="./img/22-MY-X-5-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 3x3x3
+                            <span class="section_content-item-span">Thông dụng</span>
+                            <img src="./img/conten1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 4x4x4
+                            <span class="section_content-item-span">Nâng cao</span>
+                            <img src="./img/44-Aosu-6-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 5x5x5
+                            <span class="section_content-item-span">Trí tuệ</span>
+                            <img src="./img/55-Bochuang-2-Copy-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 6x6x6
+                            <span class="section_content-item-span">Sáng tạo</span>
+                            <img src="./img/66-DS-3-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 7x7x7
+                            <span class="section_content-item-span">Thông thạo</span>
+                            <img src="./img/77-Aofu-4-e1631477966883-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Pyramix
+                            <span class="section_content-item-span">Thách đấu</span>
+                            <img src="./img/3.png" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Megamin
+                            <span class="section_content-item-span">Cao thủ</span>
+                            <img src="./img/Megaminx-AOhun-WR-4-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik color
+                            <span class="section_content-item-span">Thông minh</span>
+                            <img src="./img/Color1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik stickerless
+                            <span class="section_content-item-span">Thông thạo</span>
+                            <img src="./img/stickerless1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik sticker
+                            <span class="section_content-item-span">Thông thạo</span>
+                            <img src="./img/sticker1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik có nam châm
+                            <span class="section_content-item-span">Mới chơi</span>
+                            <img src="./img/namcham1.jpg" alt="">
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="section_content-coppy">
+                <aside>
+                    <h2 class="section_content-header">Sản phẩm</h2>
+                    <ul class="section_content-list">
+                        <li class="section_content-item">
+                            Rubik 2x2x2
+                            <span class="section_content-item-span">Dễ chơi</span>
+                            <img src="./img/22-MY-X-5-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 3x3x3
+                            <span class="section_content-item-span">Thông dụng</span>
+                            <img src="./img/conten1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 4x4x4
+                            <span class="section_content-item-span">Nâng cao</span>
+                            <img src="./img/44-Aosu-6-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 5x5x5
+                            <span class="section_content-item-span">Trí tuệ</span>
+                            <img src="./img/55-Bochuang-2-Copy-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 6x6x6
+                            <span class="section_content-item-span">Sáng tạo</span>
+                            <img src="./img/66-DS-3-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik 7x7x7
+                            <span class="section_content-item-span">Thông thạo</span>
+                            <img src="./img/77-Aofu-4-e1631477966883-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Pyramix
+                            <span class="section_content-item-span">Thách đấu</span>
+                            <img src="./img/3.png" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Megamin
+                            <span class="section_content-item-span">Cao thủ</span>
+                            <img src="./img/Megaminx-AOhun-WR-4-200x200.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik color
+                            <span class="section_content-item-span">Thông minh</span>
+                            <img src="./img/Color1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik stickerless
+                            <span class="section_content-item-span">Thông thạo</span>
+                            <img src="./img/stickerless1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik sticker
+                            <span class="section_content-item-span">Thông thạo</span>
+                            <img src="./img/sticker1.jpg" alt="">
+                        </li>
+
+                        <li class="section_content-item">
+                            Rubik có nam châm
+                            <span class="section_content-item-span">Mới chơi</span>
+                            <img src="./img/namcham1.jpg" alt="">
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-top-first">
+                <div class="container py-md-5 py-sm-4 py-3">
+                    <!-- footer first section -->
+                    <h2 class="footer-top-head-w3l font-weight-bold mb-2">Giới thiệu về chúng tôi</h2>
+                    <p class="footer-main mb-4">
+                    Nếu bạn đang cân nhắc một chiếc máy tính xách tay mới, đang tìm kiếm một dàn âm thanh nổi trên xe hơi mới mạnh mẽ hoặc mua một chiếc HDTV mới, chúng tôi sẽ giúp bạn dễ dàng tìm thấy chính xác những gì bạn cần với mức giá bạn có thể mua được. Chúng tôi cung cấp Giá thấp hàng ngày trên TV, máy tính xách tay, điện thoại di động, máy tính bảng và iPad, trò chơi điện tử, máy tính để bàn, máy ảnh và máy quay phim, âm thanh, video và hơn thế nữa.</p>
+                    <!-- //footer first section -->
+                    <!-- footer second section -->
+                    <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
+                        <div class="col-md-4 offer-footer">
+                            <div class="row">
+                                <div class="col-4 icon-fot">
+                                    <i class="fas fa-dolly"></i>
+                                </div>
+                                <div class="col-8 text-form-footer">
+                                    <h3>Miễn phí vận chuyển</h3>
+                                    <p>Đơn hàng trên 100$</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offer-footer my-md-0 my-4">
+                            <div class="row">
+                                <div class="col-4 icon-fot">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="col-8 text-form-footer">
+                                    <h3>Vận chuyển nhanh</h3>
+                                    <p>Toàn quốc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offer-footer">
+                            <div class="row">
+                                <div class="col-4 icon-fot">
+                                    <i class="far fa-thumbs-up"></i>
+                                </div>
+                                <div class="col-8 text-form-footer">
+                                    <h3>Tin cậy</h3>
+                                    <p>Sự đảm bảo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <h3 class="footer__heading">
+                            Kết nối mạng xã hội
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a class="footer-list-item-link-span">
+                                    <i class="fa-brands fa-facebook footer-list-item-link-span"></i>
+                                </a>
+                                <a href="" class="footer-list-item-link">Facebook</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <img class="footer-list-item-link-span" src="./img/Facebook_Messenger_logo.webp" alt="" width="20">
+                                <a href="" class="footer-list-item-link">Messenger</a>
+                                
+                            </li>
+                            <li class="footer-list-item">
+                                <img class="footer-list-item-link-span" src="./img/Twitter.png" alt="" width="20">
+                                <a href="" class="footer-list-item-link">Twitter</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-6 col-xs-12">
+                        <h3 class="footer__heading">
+                            Bài viết mới
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-share"></i>
+                                <a href="" class="footer-list-item-link">
+                                    Cách giải rubik 5x5x5 nhanh nhất
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-share"></i>
+                                <a href="" class="footer-list-item-link">
+                                    Cách giải Rubik 3×3 nhanh
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-share"></i>
+                                <a href="" class="footer-list-item-link">
+                                    Hướng dẫn giải rubik 4x4x4 cách đơn giản nhất
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-share"></i>
+                                <a href="" class="footer-list-item-link">
+                                    Hướng dẫn xoay rubik 3x3x3 đơn giản nhất
+                                </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-share"></i>
+                                <a href="" class="footer-list-item-link">
+                                    Cách giải rubik 2x2x2 cưc dễ hiểu
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <h3 class="footer__heading">
+                            SẢN PHẨM ĐƯỢC XẾP HẠNG CAO
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    Rubik Dayan
+                                </a>
+                                <i class="footer-list-item-link-right">
+                                    : hơn 1200 người mua
+                                </i>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    Rubik Weilong
+                                </a>
+                                <i class="footer-list-item-link-right">
+                                    : hơn 1000 người mua
+                                </i>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    Rubik Aolong
+                                </a>
+                                <i class="footer-list-item-link-right">
+                                    : hơn 900 người mua
+                                </i>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="" class="footer-list-item-link">
+                                    Rubik Yuxin
+                                </a>
+                                <i class="footer-list-item-link-right">
+                                    : hơn 500 người mua
+                                </i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-cuoi">
+                Rubik MinhTri - Copyright © 2022 <i class="span-footer">cmsaddons.net.</i> All Rights Reserved
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" id="dangnhap" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title auth-form-header" id="exampleModalLabel">Đăng Nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" maxlength="50" placeholder=" " name="email_login" id="email_login" required="">
+                                <lable class="auth-form__lable">Email</lable>
+                            </div>
+                            <div class="auth-form__group">
+                                <input class="auth-form__input" type="password" name="password_login" id="password2" maxlength="20" placeholder=" " required="">
+                                <lable class="auth-form__lable">Nhập mật khẩu</lable>
+                                <span id="showPassword2"><i class="fas fa-eye eye"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="auth-form-link__controls" data-bs-toggle="modal" data-bs-target="#dangky">
+                            Bạn chưa có tải khoản ?
+                        </a>
+                        <button type="button" class="btn btn-secondary auth-form-btn__controls-close" data-bs-dismiss="modal">Thoát</button>
+                        <input type="submit" class="auth-form-btn__controls" name="dangnhap_home" value="Đăng nhập">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        $('#showPassword2').on('click', function(){
+            var passwordField = $('#password2');
+            var passwordFieldType = passwordField.attr('type');
+            if(passwordFieldType == 'password') {
+                passwordField.attr('type', 'text');
+                $(this).val('Hide');
+            }
+            else {
+            passwordField.attr('type', 'password');
+                $(this).val('Show');
+            }
+        });
+      });
+    </script>
+    
+    <div class="modal fade" id="dangky" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title auth-form-header" id="exampleModalLabel">Đăng Ký</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="post">
+                    <div class="modal-body">
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" maxlength="50" placeholder=" " name="phone" id="phone" required="">
+                                <lable class="auth-form__lable">Số điện thoại</lable>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" maxlength="50" placeholder=" " name="name" id="name" required="">
+                                <lable class="auth-form__lable">Tên khách hàng</lable>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="email" class="auth-form__input" maxlength="50" placeholder=" " name="email" id="email" required="">
+                                <lable class="auth-form__lable">Email</lable>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" maxlength="50" placeholder=" " name="address" id="address" required="">
+                                <lable class="auth-form__lable">Địa chỉ</lable>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" maxlength="50" placeholder=" " name="note" id="note" required="">
+                                <lable class="auth-form__lable">Nghề nghiệp</lable>
+                            </div>
+                            <div class="auth-form__group">
+                                <input class="auth-form__input" type="password" name="password" id="password3" maxlength="20" placeholder=" " required="">
+                                <lable class="auth-form__lable">Nhập mật khẩu</lable>
+                                <span id="showPassword3"><i class="fas fa-eye eye"></i></span>
+                                <input type="hidden" class="form-control" placeholder="" name="giaohang"  value="0">
+                            </div>
+                            <!-- <div class="auth-form__group">
+                                <input class="auth-form__input" type="password" name="password2" id="password2" maxlength="20" placeholder=" " required="">
+                                <lable class="auth-form__lable">Nhập lại mật khẩu</lable>
+                                <span id="showPassword"><i class="fas fa-eye eye"></i></span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary auth-form-btn__controls-close" data-bs-dismiss="modal">Thoát</button>
+                        <input type="submit" class="auth-form-btn__controls" name="dangky" value="Đăng ký">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        $('#showPassword3').on('click', function(){
+            var passwordField = $('#password3');
+            var passwordFieldType = passwordField.attr('type');
+            if(passwordFieldType == 'password') {
+                passwordField.attr('type', 'text');
+                $(this).val('Hide');
+            }
+            else {
+            passwordField.attr('type', 'password');
+                $(this).val('Show');
+            }
+        });
+      });
+    </script>
+    
+</body>
+
+<div id="mess-body">
+    <img src="./img/Facebook_Messenger_logo.webp" alt="" width="40">
+</div>
+<div class="mess-body-animation">
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+    <div class="circle three"></div>
+</div>
+<div title="Về đầu trang" id="top-up"><i class="fas fa-chevron-circle-up"></i></div>
+<script>
+    var offset = 500;
+    var duration = 1;
+    $(function(){
+    $(window).scroll(function () {
+    if ($(this).scrollTop() > offset)
+    $('#top-up').fadeIn(duration);else
+    $('#top-up').fadeOut(duration);
+    });
+    $('#top-up').click(function () {
+    $('body,html').animate({scrollTop: 0}, duration);
+    });
+    });
+</script>
+<script>
+    $('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#*"]')
+    .click(function(e) {
+        var data_id = $(this).attr('href');
+        $('html, body').animate({
+        scrollTop: $(data_id).offset().top
+        }, '0');
+    });
+</script>
+<script src="./assets/spinner.js"></script>
+</html>

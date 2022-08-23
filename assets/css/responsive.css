@@ -1,0 +1,962 @@
+.mobile-menu {
+    position: fixed;
+    width: 280px;
+    background-color: #fff;
+    top: 126px;
+    left: 0;
+    bottom: 100px;
+    transform: translateX(-100%);
+    transition: transform linear 0.2s;
+    border-bottom-right-radius: 10px ;
+    border-top-right-radius: 10px ;
+    z-index: 100;
+    text-align: left;
+    overflow-y:scroll;
+}
+
+.mobile-menu i {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    transition: 0.1s;
+}
+
+.navmobile-check:checked ~.mobile-menu {
+    transform: translateX(0);
+}
+.navmobile-check:checked ~.overlay {
+    display: block;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 125px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn linear 0.2s;
+}
+
+.overlay2 {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn linear 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.grid-mobile {
+    display: flex;
+    background-color: rgb(252, 252, 252);
+    height: var(--header-nav-mobile);
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    top: 80px;
+}
+
+.grid-mobile-bottom {
+    display: flex;
+    background-color: rgba(199, 199, 199, 0.8);
+    height: var(--header-nav-mobile);
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    border-top: 2px solid #000000;
+}
+/* Mobile và Tablet */ 
+@media only screen and (max-width : 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    iframe {
+       transform: scale(0.9);
+    }
+
+}
+
+
+
+@media only screen and (min-width : 1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+    .footer {
+        padding: 20px 50px;
+    }
+    .user-tablet {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1140px){
+    .chitiet_them {
+        margin-top: 0;
+    }
+    .footer {
+        padding: 20px 50px;
+    }
+    .user-tablet {
+        display: none;
+    }
+}
+/* -md- */
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+    .hide-on-tablet {
+        display: none;
+    }
+
+    :root {
+        --header-height:80px;
+    }
+    
+    .header {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .container-fluid {
+        margin-top: var(--header-height);
+        width: 100%;
+    }
+
+    .logo_mobil {
+        width: 80%;
+    }
+
+    .timkiem {
+        top: 40px;
+        width: 300px;
+        left: 40px;
+        display: none;
+        position: absolute;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        animation: mobileSearchSideInnn linear 0.2s ;
+    }
+    @keyframes mobileSearchSideInnn {
+        from {
+            top: 20px;
+            opacity: 0;
+        }
+        to {
+            top: 50px;
+            opacity: 1;
+        }
+    }
+
+    .logo_mobil {
+        width: 80%;
+    }
+
+    .box, .stars {
+        display: none;
+    }
+
+    .user {
+        top: 45px;
+    }
+
+    .giohang {
+        top: 45px;
+    }
+
+    .sectison-card {
+        display: none;
+    }
+
+    .footer {
+        padding: 20px 50px;
+    }
+
+    .header__cart-notice {
+        top: 6px;
+    }
+
+    .user-tablet {
+        display: none;
+    }
+
+}
+
+/* -sm- */
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    :root {
+        --header-height:80px;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .container-fluid {
+        margin-top: var(--header-height);
+        width: 100%;
+    }
+
+    .container-fluid {
+        width: 100%;
+    }
+
+    .logo_mobil {
+        width: 80%;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .taikhoan {
+        visibility: hidden;
+    }
+
+    .giohang {
+        visibility: hidden;
+    }
+
+    .user {
+        visibility: hidden;
+    }
+
+    .contact {
+        width: 300px;
+    }
+    .contact-list {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .sectison-card {
+        display: none;
+    }
+
+    .section_content-coppy {
+        display: none;
+    }
+
+    .section_content {
+        align-items: center;
+        left: 200px;
+    }
+
+    .footer {
+        padding: 20px 50px;
+    }
+
+    .header__cart-notice {
+        top: 15px;
+        left: 45px;
+    }
+
+    .timkiem {
+        top: 55px;
+        width: 250px;
+        height: 50px;
+        left: 70px;
+        display: none;
+        position: absolute;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        animation: mobileSearchSideInn linear 0.2s ;
+    }
+    @keyframes mobileSearchSideInn {
+        from {
+            top: 20px;
+            opacity: 0;
+        }
+        to {
+            top: 80px;
+            opacity: 1;
+        }
+    }
+
+    .giohang-mobile {
+        display: none;
+    }
+
+    .giohang-close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+
+    .giohang-mobile-checkbox:checked ~.giohang-mobile {
+        display: block;
+    }
+    
+    .giohang-mobile-checkbox:checked ~.overlay2 {
+        display: block;
+    }
+    
+    .giohang-mobile {
+        position: absolute;
+        display: none;
+        width: 550px;
+        right: 20px;
+        top: 80px;
+        background: var(--white-color);
+        border: 1px solid bisque;
+        z-index: 110;
+        animation: giohangmobile ease-in 0.25s;
+        box-shadow: rgba(113, 113, 113, 0.5) 0px 0px 10px;
+    }
+    
+    @keyframes giohangmobile {
+        from {
+            top: -100px;
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+            top :80px;
+        }
+    }
+
+    .nav-tabs-item-sau {
+        min-width: 150px;
+        margin-top: 20px;
+    }
+
+    .giohang-tablet-checkbox:checked ~.giohang-tablet {
+        display: block;
+    }
+    
+    .giohang-tablet-checkbox:checked ~.overlay2 {
+        display: block;
+    }
+    
+    .giohang-tablet {
+        position: absolute;
+        display: none;
+        width: 500px;
+        top: 55px;
+        left: -220px;
+        background: var(--white-color);
+        border: 1px solid bisque;
+        z-index: 110;
+        animation: giohangtablet ease-in 0.25s;
+        box-shadow: rgba(113, 113, 113, 0.8) 0px 0px 30px;
+    }
+    
+    @keyframes giohangtablet {
+        from {
+            top: -100px;
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+            top :80px;
+        }
+    }
+
+    .user-tablet {
+        position: absolute;
+        background-color: #fff;
+        z-index: 100;
+        color: #000;
+        box-shadow: rgba(113, 113, 113, 0.5) 0px 0px 10px;
+        width: 120px;
+        padding: 0 10px;
+        display: none;
+        animation: usertablet linear 0.4s;
+        border-radius: 5px;
+    }
+
+    .usercheck:checked ~.user-tablet {
+        display: block;
+    }
+
+    @keyframes usertablet {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        90% {
+            opacity: 1;
+            transform: translateY(10%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    
+    }
+
+    .chitiet-img {
+        width: 80%;
+    }
+
+}
+
+
+/* nhỏ hơn 576px */
+@media only screen and (max-width : 576px) {
+    html {
+        line-height: 1.6rem;
+        box-sizing: border-box;
+        font-size: 60%;
+    }
+    :root {
+        --header-height:80px;
+        --header-nav-mobile:45px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: block;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .container-fluid {
+        margin-top: 125px;
+        width: 100%;
+    }
+
+    .pagination {
+        visibility: hidden;
+    }
+
+    .taikhoan {
+        visibility: hidden;
+    }
+
+    .giohang {
+        visibility: hidden;
+    }
+
+    .user {
+        visibility: hidden;
+    }
+
+    .box, .stars {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .contact-list {
+        display: inline-block;
+        position: absolute;
+        top: 20%;
+        right: 30px;
+        line-height: 20px;
+        width: 200px;
+    }
+
+    .timkiem {
+        width: 200px;
+        top: 45px;
+        right:0;
+        left: -80px;
+        position: absolute;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        animation: mobileSearchSideInn linear 0.2s ;
+    }
+    @keyframes mobileSearchSideInn {
+        from {
+            top: 20px;
+            opacity: 0;
+        }
+        to {
+            top: 80px;
+            opacity: 1;
+        }
+    }
+
+    .logo_mobil {
+        width: 80%;
+        transform: translateX(70%);
+    }
+
+    .logo {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .logo_mobil-c {
+        position: absolute;
+        left: 20%;
+    }
+
+    .logo_mobil-r {
+        position: absolute;
+        right: 0;
+    }
+    
+    .category {
+        display: none;
+    }
+
+    .category__iteam-link {
+        font-weight: 400;
+    }
+
+    .footer {
+        padding: 20px 20px;
+    }
+
+    .nav-tabs-item {
+        min-width: 100px;
+    }
+
+    .sectison-card {
+        display: none;
+    }
+
+    .section_content-coppy {
+        display: none;
+    }
+
+    .header__cart-notice {
+       top: -3px;
+       left: 10px;
+       background-color: #bbbbbb;
+       color: rgb(90, 90, 90);
+       width: 20px;
+       text-align: center;
+    }
+
+    .giohang-close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+
+    .giohang-mobile-checkbox:checked ~.giohang-mobile {
+        display: block;
+    }
+    
+    .giohang-mobile-checkbox:checked ~.overlay2 {
+        display: block;
+    }
+    
+    .giohang-mobile {
+        position: absolute;
+        display: none;
+        width: 410px;
+        top: 50px;
+        left: -80px;
+        background: var(--white-color);
+        border: 1px solid bisque;
+        z-index: 110;
+        animation: giohangmobile ease-in 0.25s;
+        box-shadow: rgba(113, 113, 113, 0.5) 0px 0px 10px;
+    }
+    
+    @keyframes giohangmobile {
+        from {
+            top: -100px;
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+            top :80px;
+        }
+    }
+
+    .nav-mobile-bar {
+        margin-right: 5px;
+    }
+
+    .taikhoan-mobile {
+        position: absolute;
+        display: none;
+        width: 200px;
+        top: 45px;
+        left: 20px;
+        background: var(--white-color);
+        border: 1px solid bisque;
+        z-index: 110;
+        animation: taikhoanmobile ease-in 0.5s;
+        box-shadow: rgba(113, 113, 113, 0.5) 0px 0px 10px;
+    }
+
+    .taikhoan-mobile-checkbox:checked ~.taikhoan-mobile {
+        display: block;
+    }
+
+    @keyframes taikhoanmobile {
+        0% {
+            /* transform: translateY(0); */
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+            /* transform: translateY(100%); */
+        }
+    }
+
+    .user-tablet {
+        display: none;
+    }
+
+    .chitiet-img {
+        width: 80%;
+    }
+
+    .dropdown-menu-mobile {
+        top: 10px !important;
+    }
+
+    
+}
+
+@media only screen and (min-width: 576px) {
+    .show-mobile {
+        display: none;
+    }
+}
+
+/* Mobile (nhỏ hơn 412px)*/
+@media only screen and (max-width : 412px) {
+    html {
+        line-height: 1.6rem;
+        box-sizing: border-box;
+        font-size: 60%;
+    }
+
+    :root {
+        --header-height:80px;
+        --header-nav-mobile:45px;
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .show-on-mobile {
+        display: block;
+    }
+
+    .header {
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .container-fluid {
+        margin-top: 125px;
+        width: 100%;
+    }
+
+    .pagination {
+        visibility: hidden;
+    }
+
+    .taikhoan {
+        visibility: hidden;
+    }
+
+    .giohang {
+        visibility: hidden;
+    }
+
+    .user {
+        visibility: hidden;
+    }
+
+    .box, .stars {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .contact-list {
+        display: inline-block;
+        position: absolute;
+        top: 20%;
+        right: 30px;
+        line-height: 20px;
+        width: 200px;
+    }
+
+    .timkiem {
+        width: 222px;
+        top: 45px;
+        right:0;
+        transform: translateX(-20%);
+        position: absolute;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        animation: mobileSearchSideInn linear 0.2s ;
+    }
+    @keyframes mobileSearchSideInn {
+        from {
+            top: 20px;
+            opacity: 0;
+        }
+        to {
+            top: 80px;
+            opacity: 1;
+        }
+    }
+
+    .logo_mobil {
+        width: 80%;
+        transform: translateX(50%);
+    }
+
+    .logo {
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .logo_mobil-c {
+        position: absolute;
+        left: 15%;
+    }
+
+    .logo_mobil-l {
+        position: absolute;
+        left: 0;
+        animation: translate3d infinite 1s linear ;
+     
+    }
+
+    .logo_mobil-r {
+        position: absolute;
+        right: 0;
+        animation: translate3d infinite 1s linear ;
+     
+    }
+    
+    @keyframes translate3d {
+        0% {
+            transform: rotate(0) ;
+        }
+        100% {
+            transform: rotate(360deg); 
+        }
+    }
+    .category {
+        display: none;
+    }
+
+    .category__iteam-link {
+        font-weight: 400;
+    }
+
+    .footer {
+        padding: 20px 20px;
+    }
+
+    .nav-tabs-item {
+        min-width: 100px;
+    }
+    .nav-tabs-item-moi {
+        display: none;
+    }
+
+    .nav-tabs-item-link {
+        width: 1px;
+    }
+
+    .sectison-card {
+        display: none;
+    }
+
+    .section_content-coppy {
+        display: none;
+    }
+
+    .section_content {
+        right: 50px;
+    }
+
+    .header__cart-notice {
+       top: -3px;
+       left: 10px;
+       background-color: #bbbbbb;
+       color: rgb(90, 90, 90);
+       width: 20px;
+       text-align: center;
+    }
+
+    .giohang-close {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        transition: 0.1s;
+        cursor: pointer;
+    }
+
+    .giohang-mobile-checkbox:checked ~.giohang-mobile {
+        display: block;
+    }
+    
+    .giohang-mobile-checkbox:checked ~.overlay2 {
+        display: block;
+    }
+    
+    .giohang-mobile {
+        position: absolute;
+        display: none;
+        width: 330px;
+        top: 45px;
+        left: -60px;
+        background: var(--white-color);
+        border: 1px solid bisque;
+        z-index: 110;
+        animation: giohangmobile ease-in 0.25s;
+        box-shadow: rgba(113, 113, 113, 0.5) 0px 0px 10px;
+    }
+    
+    @keyframes giohangmobile {
+        from {
+            top: -100px;
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+            top :80px;
+        }
+    }
+
+    .nav-mobile-bar {
+        margin-right: 5px;
+    }
+
+    .taikhoan-mobile {
+        position: absolute;
+        display: none;
+        width: 200px;
+        top: 45px;
+        left: 20px;
+        background: var(--white-color);
+        border: 1px solid bisque;
+        z-index: 110;
+        animation: taikhoanmobile ease-in 0.5s;
+        box-shadow: rgba(113, 113, 113, 0.5) 0px 0px 10px;
+    }
+
+    .taikhoan-mobile-checkbox:checked ~.taikhoan-mobile {
+        display: block;
+    }
+
+    @keyframes taikhoanmobile {
+        0% {
+            /* transform: translateY(0); */
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+            /* transform: translateY(100%); */
+        }
+    }
+
+    .user-tablet {
+        display: none;
+    }
+
+    .chitiet-img {
+        width: 80%;
+    }
+
+    .section_2 {
+        max-width: 412px;
+        display: none;
+    }
+
+    #top-up {
+        font-size: 30px;
+        cursor: pointer;
+        position: fixed;
+        z-index: 9999;
+        color:#004993;
+        bottom: 40px;
+        right: 30px;
+        display: none;
+    }
+    #top-up:hover {
+        color: rgb(0, 183, 255)
+    }
+
+    h3.category__heading {
+        color: orangered;
+        font-size: 1.8rem;
+        text-shadow: 1px 1px 5px grey;
+        font-weight: bold;
+        text-align: left;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .label-close {
+        position: absolute;
+        width: 30px;
+        top: 0;
+        right: 0;
+    }
+
+    .dropdown-menu-mobile {
+        top: 10px !important;
+    }
+
+}
+.look-mobile {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.grid-mobile-col.active {
+    border-bottom: 3px solid orange;
+}
