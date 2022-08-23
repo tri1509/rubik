@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' href='./img/9.png' />
     <title>MT Rubik</title>
-    <link href="http://fonts.googleapis.com/css?family=Dynalight" rel="stylesheet" type="text/css"/>
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
 	rel="stylesheet">

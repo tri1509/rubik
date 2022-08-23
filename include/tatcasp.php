@@ -68,7 +68,7 @@
                 $('.owl-carousel').owlCarousel({
                 loop:true,
                 nav:true,
-                dots:true,
+                // dots:true,
                 autoplay:true,
                 autoplayTimeout:6000,
                 navText:
@@ -144,10 +144,10 @@
         item:5,
         responsive:{
             0:{
-                items:2
+                items:5
             },
             600:{
-                items:3
+                items:5
             },
             1000:{
                 items:5
@@ -156,6 +156,10 @@
         })
     </script>
     </div>
+</div>
+
+<div class="body-allsp-mobile show-mobile">
+    kkkkkkkkkkkkk
 </div>
 
         

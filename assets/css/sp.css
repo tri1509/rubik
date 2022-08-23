@@ -26,7 +26,7 @@
     max-width: 1200px;
     width: 100%;
     min-width: 1200px;
-    margin: 10px auto 0;
+    margin: 10px auto;
     position: relative;
 }
 
@@ -327,15 +327,54 @@
     -o-text-overflow: clip;
     text-overflow: clip;
     white-space: pre;
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+    animation: textshadow 1s ease-out infinite;
     -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-  }
-  
-  .neon:hover {
-    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
-  }
+}
 
+@keyframes textshadow {
+    0% {
+        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
+    
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+    }
+    0% {
+        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #42d8cb , 0 0 70px #ff00de , 0 0 80px #28dae0 , 0 0 100px #00ffaa ;
+    }
+}
+  
+/* .neon:hover {
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+} */
+
+@media only screen and (min-width: 412px) and (max-width: 1023px){
+    .categories_all {
+        display: none;
+    }
+    .body-allsp {
+        margin-top: 125px;
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    .body-allsp {
+        display: none;
+    }
+    .section {
+        margin-top: 125px;
+    }
+}
+
+@media only screen and (max-width : 412px) {
+    .body-allsp {
+        display: none;
+    }
+    .body-allsp-mobile {
+        margin-top: 125px;
+    }
+}
 
