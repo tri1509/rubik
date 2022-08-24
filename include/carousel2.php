@@ -4,7 +4,7 @@
             $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id DESC");
             while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
                 $id_category = $row_cate_home['category_id'];
-                if($row_cate_home['category_id']>7){
+                if($row_cate_home['category_id']>9){
         ?>
             <div class="item">
                 <nav class="category-2">

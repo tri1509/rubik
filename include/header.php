@@ -23,7 +23,7 @@
         <nav class="nav">
             <div class="logo">
                 <img src="./img/2.png" alt="" class="logo_mobil-l show-mobile" width="50">
-                <p class="neon logo_mobil-c">Minh Trí Rubik</p>
+                <a href="index.php"><p class="neon logo_mobil-c">Minh Trí Rubik </p></a>
                 <img src="./img/5.png" alt="" class="logo_mobil-r show-mobile" width="50">
             </div>
             <div class="contact">

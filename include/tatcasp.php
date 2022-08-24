@@ -10,18 +10,18 @@
                     <?php
                         $sql_category_danhmuc = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
                         while($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)){
-                            if($row_category_danhmuc['category_id']<=7){
+                            if($row_category_danhmuc['category_id']<=9){
                     ?>
                         <li class="categories-item"><a href="#<?php echo $row_category_danhmuc['category_id']; ?>">Rubik <?php echo $row_category_danhmuc['category_name'] ?></a> </li>
                     <?php }} ?>
                     </ul>
                 </li>
-                <li class="hassub hassup-two"><span></span><i class="icon-categories fa-solid fa-table-cells"></i>Rubik thông dụng
+                <li class="hassub hassup-two"><span></span><i class="icon-categories fa-solid fa-table-cells"></i>Rubik nâng cao
                     <ul class="categories-list categories-list-two">
                     <?php
                         $sql_category_danhmuc2 = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
                         while($row_category_danhmuc2 = mysqli_fetch_array($sql_category_danhmuc2)){
-                            if($row_category_danhmuc2['category_id'] > 7) {
+                            if($row_category_danhmuc2['category_id'] > 9) {
                     ?>
                         <li class="categories-item"><a href="#<?php echo $row_category_danhmuc2['category_id']; ?>">Rubik <?php echo $row_category_danhmuc2['category_name'] ?></a> </li>
                     <?php }} ?>
@@ -159,7 +159,70 @@
 </div>
 
 <div class="body-allsp-mobile show-mobile">
-    kkkkkkkkkkkkk
+    <div class="homebanner-mobil show-mobile">
+        <div class="owl-carousel-center owl-carousel owl-theme owl-loaded" style="text-align: center">
+            <div class="item" style="text-align: center">
+                <a href=""><img src="./img/bn3.jpg" alt="" width="412px" height="auto"></a>
+            </div>
+            <div class="item" style="text-align: center">
+                <a href=""><img src="./img/bn4.jpg" alt="" width="412px" height="auto"></a>
+            </div>
+        </div>
+        <script>
+            $('.owl-carousel').owlCarousel({
+            loop:true,
+            nav:true,
+            // dots:true,
+            autoplay:true,
+            autoplayTimeout:6000,
+            navText:
+            ['<i class="fa-solid fa-chevron-left categories-icon categories-icon-l"></i>',
+            '<i class="fa-solid fa-chevron-right categories-icon categories-icon-r"></i>'],
+            item:1,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+            })
+        </script>
+
+<?php
+        $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id DESC");
+        while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
+            $id_category = $row_cate_home['category_id'];
+    ?>
+        <div class="main-one-mobile show-mobile">
+            <p class="main-header-mobile main-header" id="<?php echo $id_category ?>">Rubik <?php echo $row_cate_home['category_name'] ?></p>
+            <div class="main-mobile">
+            <?php
+                $sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
+                while($row_sanpham = mysqli_fetch_array($sql_product)) {
+                    if($row_sanpham['category_id']==$id_category){
+            ?>
+                <div class="item main-mobile-item">
+                    <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_sanpham['sanpham_name'] ; ?>">
+                        <div class="home-product__danhmuc-img"><img src="./img/<?php echo $row_sanpham['hinh']; ?>" alt="" width="100%" height="auto"></div>
+                        <h4 class="home-product__danhmuc-name"><?php echo $row_sanpham['sanpham_name'] ; ?></h4>
+                        <div class="home-product__danhmuc-price">
+                            <span class="home-product__danhmuc-price-new"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai'])."₫" ; ?></span>
+                            <span class="home-product__danhmuc-price-old"><?php echo number_format($row_sanpham['sanpham_gia'])."₫" ; ?></span>
+                        </div>
+                        <div class="promotion clr"><i class="item-span"><i class="fa-solid fa-feather"></i>Freeship đơn hàng từ 500.000 đ</i></div>
+                    </a>
+                </div>
+            <?php }} ?>
+            </div>
+        </div>
+
+    <?php } ?>
+    </div>
 </div>
 
         

@@ -17,12 +17,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header category__iteam-active" id="panelsStayOpen-headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                Rubik thông dụng
+                                Rubik cơ bản
                             </button>
                         </h2>
                         <?php
                             while($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)){
-                                if($row_category_danhmuc['category_id']<=7){
+                                if($row_category_danhmuc['category_id']<=9){
                         ?>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body category__iteam">
@@ -34,12 +34,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                Rubik biến thể
+                                Rubik nâng cao
                             </button>
                         </h2>
                         <?php
                             while($row_category_danhmuc2 = mysqli_fetch_array($sql_category_danhmuc2)){
-                                if($row_category_danhmuc2['category_id'] > 7) {
+                                if($row_category_danhmuc2['category_id'] > 9) {
                         ?>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body category__iteam">

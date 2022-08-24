@@ -13,12 +13,12 @@
 
     <ul class="category__list">
         <li class="category__iteam category__iteam-active">
-            <a href="" class="category__iteam-link">Rubik phổ biến</a>
+            <a href="" class="category__iteam-link">Rubik cơ bản</a>
         </li>
 
         <?php
             while($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)){
-                if($row_category_danhmuc['category_id']<=7){
+                if($row_category_danhmuc['category_id']<=9){
         ?>
             <li class="category__iteam">
                 <a href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'];?>" class="category__iteam-link">Rubik <?php echo $row_category_danhmuc['category_name'] ?></a>
@@ -29,11 +29,11 @@
         ?>
 
         <li class="category__iteam category__iteam-active">
-            <a href="" class="category__iteam-link">Rubik thông dụng</a>
+            <a href="" class="category__iteam-link">Rubik nâng cao</a>
         </li>
         <?php
             while($row_category_danhmuc2 = mysqli_fetch_array($sql_category_danhmuc2)){
-                if($row_category_danhmuc2['category_id'] > 7) {
+                if($row_category_danhmuc2['category_id'] > 9) {
         ?>
             <li class="category__iteam">
                 <a href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc2['category_id'];?>" class="category__iteam-link">Rubik <?php echo $row_category_danhmuc2['category_name'] ?></a>
