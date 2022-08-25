@@ -524,7 +524,8 @@
 
     .logo_mobil-c {
         position: absolute;
-        left: 20%;
+        left: 30%;
+        top: 0;
     }
 
     .logo_mobil-r {
@@ -756,12 +757,12 @@
         position: fixed;
         left: 0;
         right: 0;
-        width: 100%;
     }
 
     .logo_mobil-c {
         position: absolute;
         left: 25%;
+        top: 0;    
     }
 
     .logo_mobil-l {

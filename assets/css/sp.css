@@ -351,6 +351,7 @@
     }
 }
 
+
 @media only screen and (min-width: 412px) and (max-width: 1023px){
     .categories_all {
         display: none;
@@ -460,5 +461,6 @@
         margin-left: 5px;
         max-width:160px!important;
     }
+
 }
 

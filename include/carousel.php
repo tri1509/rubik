@@ -32,18 +32,10 @@
                                 </div>
                             </div>
                         </a>
-                    <?php
-                        }
-                    }
-                    ?>
+                    <?php } } ?>
                 </nav>
             </div>
-        <?php
-            }
-        }
-        ?>
-    
-    
+        <?php } } ?>
     </div>
 </div>
 <script>
