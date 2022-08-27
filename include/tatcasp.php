@@ -155,6 +155,25 @@
         }
         })
     </script>
+        <?php
+            $sql_tenbaiviet = mysqli_query($con,"SELECT * FROM tbl_baiviet ORDER BY RAND() LIMIT 1,4");
+        ?>	 	
+        <div class="main-baiviet">
+            <p class="main-header">bài viết</p>
+            <div class="row">
+                <?php while($row_bai = mysqli_fetch_array($sql_tenbaiviet)) { ?>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                    <a href="?quanly=chitietsp&id=<?php echo $row_bai['baiviet_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_bai['tenbaiviet'] ; ?>">
+                        <div class="home-product__baiviet">
+                            <div class="home-product__baiviet-img"><img src="./img/<?php echo $row_bai['hinh']; ?>" alt="" width="100%" height="150px"></div>
+                            <h4 class="home-product__baiviet-name"><?php echo $row_bai['tenbaiviet'] ; ?></h4>
+                            <i class="tomtat"><?php echo $row_bai['tomtat'] ; ?></i>
+                        </div>
+                    </a>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -193,7 +212,7 @@
             })
         </script>
 
-<?php
+    <?php
         $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id DESC");
         while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
             $id_category = $row_cate_home['category_id'];
