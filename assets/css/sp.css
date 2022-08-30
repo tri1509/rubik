@@ -722,6 +722,17 @@ article a, article a:hover, article a:active {
         right: 20px;
     }
 
+    .home-product__danhmuc-name-bv {
+        display: block;
+        line-height: 1.3em;
+        min-height: 36px;
+        font-size: 1.3rem;
+        padding: 0 10px;
+        color: #111;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
 
 }
 

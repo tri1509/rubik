@@ -254,7 +254,7 @@
                                 <div class="home-product__danhmuc-img"><img src="./img/<?php echo $row_bai['hinh']; ?>" alt="" width="100px" height="auto"></div>
                             </div>
                             <div class="col-6">
-                                <h4 class="home-product__danhmuc-name" style="margin-top:20px"><?php echo $row_bai['tenbaiviet']; ?></h4>
+                                <h4 class="home-product__danhmuc-name-bv" style="margin-top:20px"><?php echo $row_bai['tenbaiviet']; ?></h4>
                                 <i class="tomtat-mobile"><?php echo $row_bai['tomtat'] ; ?></i>
                             </div>
                         </div>
