@@ -28,7 +28,7 @@
                     </ul>
                 </li>
 
-                <li class="hassub"><i class="icon-categories fa-solid fa-star-of-david"></i>Combo rubik</li>
+                <li class="hassub"><i class="icon-categories fa-solid fa-star-of-david"></i><a href="#baiviet">Bài viết</a> </li>
 
                 <li class="hassub hassup-three"><span></span><i class="icon-categories fa-solid fa-tags"></i>Phụ Kiện Rubik
                     <ul class="categories-list categories-list-three">
@@ -158,12 +158,12 @@
         <?php
             $sql_tenbaiviet = mysqli_query($con,"SELECT * FROM tbl_baiviet ORDER BY RAND() LIMIT 1,4");
         ?>	 	
-        <div class="main-baiviet">
+        <div class="main-baiviet" id="baiviet">
             <p class="main-header">bài viết</p>
             <div class="row">
                 <?php while($row_bai = mysqli_fetch_array($sql_tenbaiviet)) { ?>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                    <a href="?quanly=chitietsp&id=<?php echo $row_bai['baiviet_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_bai['tenbaiviet'] ; ?>">
+                    <a href="?quanly=baiviet&id=<?php echo $row_bai['baiviet_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_bai['tenbaiviet'] ; ?>">
                         <div class="home-product__baiviet">
                             <div class="home-product__baiviet-img"><img src="./img/<?php echo $row_bai['hinh']; ?>" alt="" width="100%" height="150px"></div>
                             <h4 class="home-product__baiviet-name"><?php echo $row_bai['tenbaiviet'] ; ?></h4>
@@ -239,8 +239,30 @@
             <?php }} ?>
             </div>
         </div>
-
     <?php } ?>
+        <div class="main-one-mobile show-mobile">
+            <p class="main-header-mobile main-header" id="baiviet">Bài Viết</p>
+            <div class="main-mobile-bv">
+        <?php
+            $sql_tenbaiviet = mysqli_query($con,"SELECT * FROM tbl_baiviet");
+            while($row_bai = mysqli_fetch_array($sql_tenbaiviet)) { 
+        ?>
+                <div class="item main-mobile-item-bv">
+                    <a href="?quanly=baiviet&id=<?php echo $row_bai['baiviet_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_sanpham['sanpham_name'] ; ?>">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="home-product__danhmuc-img"><img src="./img/<?php echo $row_bai['hinh']; ?>" alt="" width="100px" height="auto"></div>
+                            </div>
+                            <div class="col-6">
+                                <h4 class="home-product__danhmuc-name" style="margin-top:20px"><?php echo $row_bai['tenbaiviet']; ?></h4>
+                                <i class="tomtat-mobile"><?php echo $row_bai['tomtat'] ; ?></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        <?php } ?>
+            </div>
+        </div>
     </div>
 </div>
 

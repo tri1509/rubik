@@ -46,6 +46,8 @@
         }
         if($tam=='tatcasp'){
             include('include/tatcasp.php');
+        }elseif ($tam=='baiviet'){
+            include('include/baiviet.php');
         }else {
             include('include/container.php');
         }

@@ -50,13 +50,13 @@
                 <li class="section_content-item">
                     Rubik 2x2x2
                     <span class="section_content-item-span">Dễ chơi</span>
-                    <img src="./img/22-MY-X-5-200x200.jpg" alt="">
+                    <img src="./img/22-1.jpg" alt="">
                 </li>
 
                 <li class="section_content-item">
                     Rubik 3x3x3
                     <span class="section_content-item-span">Thông dụng</span>
-                    <img src="./img/conten1.jpg" alt="">
+                    <img src="./img/33-1.jpg" alt="">
                 </li>
 
                 <li class="section_content-item">
@@ -92,7 +92,7 @@
                 <li class="section_content-item">
                     Megamin
                     <span class="section_content-item-span">Cao thủ</span>
-                    <img src="./img/Megaminx-AOhun-WR-4-200x200.jpg" alt="">
+                    <img src="./img/megaminx-1.jpg" alt="">
                 </li>
 
                 <li class="section_content-item">
@@ -128,13 +128,13 @@
                 <li class="section_content-item">
                     Rubik 2x2x2
                     <span class="section_content-item-span">Dễ chơi</span>
-                    <img src="./img/22-MY-X-5-200x200.jpg" alt="">
+                    <img src="./img/22-1.jpg" alt="">
                 </li>
 
                 <li class="section_content-item">
                     Rubik 3x3x3
                     <span class="section_content-item-span">Thông dụng</span>
-                    <img src="./img/conten1.jpg" alt="">
+                    <img src="./img/33-1.jpg" alt="">
                 </li>
 
                 <li class="section_content-item">
@@ -170,7 +170,7 @@
                 <li class="section_content-item">
                     Megamin
                     <span class="section_content-item-span">Cao thủ</span>
-                    <img src="./img/Megaminx-AOhun-WR-4-200x200.jpg" alt="">
+                    <img src="./img/megaminx-1.jpg" alt="">
                 </li>
 
                 <li class="section_content-item">

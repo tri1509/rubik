@@ -685,26 +685,14 @@
 
     .logo_mobil-l {
         position: absolute;
-        left: 0;
-        animation: translate3d infinite 1s linear ;
-     
+        left: 0;     
     }
 
     .logo_mobil-r {
         position: absolute;
         right: 0;
-        animation: translate3d infinite 1s linear ;
-     
     }
     
-    @keyframes translate3d {
-        0% {
-            transform: rotate(0) ;
-        }
-        100% {
-            transform: rotate(360deg); 
-        }
-    }
     .category {
         display: none;
     }
