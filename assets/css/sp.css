@@ -160,8 +160,9 @@
     float: right;
     width: 270px;
     height: 320px;
-    overflow: hidden;
+    position: relative;
 }
+
 .clearfix {
     display: block;
 }.clr {
@@ -359,15 +360,18 @@
     transition: 0.2s;
 }
 
-.home-product__danhmuc-link:hover .home-product__danhmuc-name {
-    text-shadow: 0 0 0.2em #F87;
+@media (hover:hover) {
+    .home-product__danhmuc-link:hover .home-product__danhmuc-name {
+        text-shadow: 0 0 0.2em #F87;
+    }
+    .home-product__danhmuc-link:hover .home-product__danhmuc-img{
+        transform: translateY(-10px);
+    }
+    .home-product__danhmuc-link:hover .home-product__danhmuc {
+        box-shadow: rgba(113, 113, 113, 0.3) 0px 5px 5px;   
+    }
 }
-.home-product__danhmuc-link:hover .home-product__danhmuc-img{
-    transform: translateY(-10px);
-}
-.home-product__danhmuc-link:hover .home-product__danhmuc {
-    box-shadow: rgba(113, 113, 113, 0.3) 0px 5px 5px;   
-}
+
 
 .home-product__danhmuc-price {
     display: block;
