@@ -7,6 +7,7 @@
     </a>
 </div>
 <?php
+    $sql_sanphamnoibat = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_noibat='1' ORDER BY category_id DESC");
     while($row_sanphamnoibat = mysqli_fetch_array($sql_sanphamnoibat)) {
 ?>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
@@ -16,8 +17,8 @@
                 </div>
                 <h4 class="home-product__item-name"><?php echo $row_sanphamnoibat['sanpham_name'] ; ?></h4>
                 <div class="home-product__item-price">
-                    <span class="home-product__item-price-old"><?php echo number_format($row_sanphamnoibat['sanpham_gia'])."đ" ; ?></span>
-                    <span class="home-product__item-price-new"><?php echo number_format($row_sanphamnoibat['sanpham_giakhuyenmai'])."đ" ; ?></span>
+                    <span class="home-product__item-price-old"><?php echo number_format($row_sanphamnoibat['sanpham_gia'])." đ" ; ?></span>
+                    <span class="home-product__item-price-new"><?php echo number_format($row_sanphamnoibat['sanpham_giakhuyenmai'])." đ" ; ?></span>
                 </div>
                 <form action="?quanly=giohang" method="post">
                     <fieldset>
@@ -30,15 +31,10 @@
                         <input type="submit" class="muahang" name="themgiohang" value="Mua hàng"></input>
                     </fieldset>
                 </form>
-                <div class="home-product__item-hot">
-                    <span class="home-product__item-hot-chill">
-                        <img src="/rubik/img/aaaa.gif" alt="">
-                    </span>
-                </div>
+                <div class="home-product__item-hot"><img src="./img/top.png" alt="" width="40" height="40"></div>
             </a>
         </div>
     </div>
 <?php 
 }
 ?>
-   

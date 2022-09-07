@@ -19,7 +19,7 @@
                         <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ; ?>" class="category__link-2">
                             <div class="row no-gutters row-magrin">
                                 <div class="col-xl-4 col-lg-4">
-                                    <img src="./img/<?php echo $row_sanpham['hinh']; ?>" alt="" width="100%" height="70">
+                                    <img src="./img/<?php echo $row_sanpham['hinh']; ?>" alt="" width="100%" height="70" style="object-fit: cover">
                                 </div>
                                 <div class="col-xl-8 col-lg-8">
                                     <div class="right-text">

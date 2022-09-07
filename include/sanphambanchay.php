@@ -2,11 +2,12 @@
     <a href="?quanly=sanphamnoibat" class="">
         <button class="btn nav-tabs-item nav-tabs-item-hover">Sản phẩm nổi bật</button> 
     </a>
-    <a href="?quanly=sanphambanchay" class="nav-tabs-item-link"> 
+    <a href="" class="nav-tabs-item-link"> 
         <button class="btn nav-tabs-item active">Sản phẩm bán chạy</button>
     </a>
 </div>
 <?php
+    $sql_sanphambanchay = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_banchay='1' ORDER BY category_id DESC");
     while($row_sanphambanchay = mysqli_fetch_array($sql_sanphambanchay)) {
 ?>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
@@ -38,4 +39,3 @@
 <?php 
 }
 ?>
-   

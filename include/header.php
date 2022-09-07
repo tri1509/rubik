@@ -17,8 +17,7 @@
     
     }
 ?>
-
-<header class="header shadow-sm">
+<header class="header shadow-sm" id="navbar">
     <div class="grid wide">
         <nav class="nav">
             <div class="logo">
@@ -49,45 +48,45 @@
                             <?php
                                 $sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
                             ?>
-                                <form action="" method="POST">
-                                    <div class="header__cart-list">
-                                        <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
-                                        <ul class="header__cart-list-item">
-                                        <?php
-                                            $total = 0;
-                                            while($row_fetch_giohang = mysqli_fetch_array($sql_lay_giohang)){ 
-                                                $subtotal = $row_fetch_giohang['soluong'] * $row_fetch_giohang['giasanpham'];
-                                                $total+=$subtotal;
-                                            if($row_fetch_giohang !== 0) {
-                                        ?>
-                                            <li class="header__cart-item">
-                                                <img src="./img/<?php echo $row_fetch_giohang['hinhanh']?>" alt="" class="header__cart-img">
-                                                <div class="header__cart-item-info">
-                                                    <div class="header__cart-item-head">
-                                                        <h5 class="header__cart-item-name"><?php echo $row_fetch_giohang['tensanpham'] ?></h5>
-                                                        <div class="deader__cart-item-price-wrap">
-                                                            <span class="header__cart-item-price"><?php echo number_format($row_fetch_giohang['giasanpham']).'vnđ' ?></span>
-                                                            <span class="header__cart-item-multiply">x</span>
-                                                            <span class="header__cart-item-qnt"><?php echo $row_fetch_giohang['soluong'] ?></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="header__cart-item-body">
-                                                        <span class="header__cart-item-description">
-                                                            <?php echo number_format($row_fetch_giohang['giasanpham']).'vnđ' ?>
-                                                        </span>
-                                                        <span class="header__cart-item-remove">
-                                                            <a href="?quanly=giohang&xoa=<?php echo $row_fetch_giohang['giohang_id'] ?>">Xóa</a>
-                                                        </span>
+                            <form action="" method="POST">
+                                <div class="header__cart-list">
+                                    <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                    <ul class="header__cart-list-item">
+                                    <?php
+                                        $total = 0;
+                                        while($row_fetch_giohang = mysqli_fetch_array($sql_lay_giohang)){ 
+                                            $subtotal = $row_fetch_giohang['soluong'] * $row_fetch_giohang['giasanpham'];
+                                            $total+=$subtotal;
+                                        if($row_fetch_giohang !== 0) {
+                                    ?>
+                                        <li class="header__cart-item">
+                                            <img src="./img/<?php echo $row_fetch_giohang['hinhanh']?>" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name"><?php echo $row_fetch_giohang['tensanpham'] ?></h5>
+                                                    <div class="deader__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price"><?php echo number_format($row_fetch_giohang['giasanpham']).'vnđ' ?></span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-qnt"><?php echo $row_fetch_giohang['soluong'] ?></span>
                                                     </div>
                                                 </div>
-                                            </li>
-                                        <?php
-                                            }
-                                            else{
-                                                echo "Không có sản phẩm";
-                                            }
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        <?php echo number_format($row_fetch_giohang['giasanpham']).'vnđ' ?>
+                                                    </span>
+                                                    <span class="header__cart-item-remove">
+                                                        <a href="?quanly=giohang&xoa=<?php echo $row_fetch_giohang['giohang_id'] ?>">Xóa</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    <?php
                                         }
-                                        ?>
+                                        else{
+                                            echo "Không có sản phẩm";
+                                        }
+                                    }
+                                    ?>
                                     </ul>
                                     <a href="?quanly=giohang" class="header__cart-view-cart">Xem giỏ hàng</a>
                                 </div>
@@ -335,16 +334,16 @@
 		}
 	}elseif(isset($_POST['dangky'])){
 		$name = $_POST['name'];
-	 	$phone = $_POST['phone'];
-	 	$email = $_POST['email'];
-	 	$password = ($_POST['password']);
-	 	$note = $_POST['note'];
-	 	$address = $_POST['address'];
-	 	$giaohang = $_POST['giaohang'];
- 		$sql_khachhang = mysqli_query($con,"INSERT INTO tbl_khachhang(name,phone,email,address,note,giaohang,password) values ('$name','$phone','$email','$address','$note','$giaohang','$password')");
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $password = ($_POST['password']);
+        $note = $_POST['note'];
+        $address = $_POST['address'];
+        $giaohang = $_POST['giaohang'];
+        $sql_khachhang = mysqli_query($con,"INSERT INTO tbl_khachhang(name,phone,email,address,note,giaohang,password) values ('$name','$phone','$email','$address','$note','$giaohang','$password')");
  		$sql_select_khachhang = mysqli_query($con,"SELECT * FROM tbl_khachhang ORDER BY khachhang_id DESC LIMIT 1");
- 		$row_khachhang = mysqli_fetch_array($sql_select_khachhang);
- 		$_SESSION['dangnhap_home'] = $name;
+        $row_khachhang = mysqli_fetch_array($sql_select_khachhang);
+        $_SESSION['dangnhap_home'] = $name;
 		$_SESSION['khachhang_id'] = $row_khachhang['khachhang_id'];
 		
  		// header('Location:index.php?quanly=giohang');

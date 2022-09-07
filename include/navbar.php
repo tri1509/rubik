@@ -4,11 +4,11 @@
 ?>
 <div class="grid-mobile shadow-sm show-mobile">
     <div class="col-3 grid-mobile-col">
-        <div class="nav-mobile hide-on-tablet hide-on-pc">
+        <div class="nav-mobile show-on-mobile">
             <input hidden type="checkbox" name="navmobile" id="navmobile" class="navmobile-check">
             <label for="navmobile" class="pointer"><i class="fa-solid fa-bars nav-mobile-bar"></i>Danh mục</label>
             <label for="navmobile" class="overlay"></label>
-            <div class="mobile-menu hide-on-tablet hide-on-pc">
+            <div class="mobile-menu show-on-mobile">
                 <h3 class="category__heading">
                     Danh mục sản phẩm
                 </h3>

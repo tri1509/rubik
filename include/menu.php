@@ -8,7 +8,7 @@
 
 <nav class="category">
     <h3 class="category__heading">
-        <a href="?quanly=tatcasp"> Danh mục sản phẩm</a>
+        <a href="?quanly=tatcasp">Sản phẩm</a>
     </h3>
 
     <ul class="category__list">

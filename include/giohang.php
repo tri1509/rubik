@@ -1,25 +1,25 @@
 <?php
 	if(isset($_POST['themgiohang'])){
- 	$tensanpham = $_POST['tensanpham'];
- 	$sanpham_id = $_POST['sanpham_id'];
- 	$hinhanh = $_POST['hinhanh'];
- 	$gia = $_POST['giasanpham'];
- 	$soluong = $_POST['soluong'];	
- 	$sql_select_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang WHERE sanpham_id='$sanpham_id'");
- 	$count = mysqli_num_rows($sql_select_giohang);
- 	if($count>0){
- 		$row_sanpham = mysqli_fetch_array($sql_select_giohang);
- 		$soluong = $row_sanpham['soluong'] + 1;
- 		$sql_giohang = "UPDATE tbl_giohang SET soluong='$soluong' WHERE sanpham_id='$sanpham_id'";
- 	}else{
- 		$soluong = $soluong;
- 		$sql_giohang = "INSERT INTO tbl_giohang(tensanpham,sanpham_id,giasanpham,hinhanh,soluong) values ('$tensanpham','$sanpham_id','$gia','$hinhanh','$soluong')";
+		$tensanpham = $_POST['tensanpham'];
+		$sanpham_id = $_POST['sanpham_id'];
+		$hinhanh = $_POST['hinhanh'];
+		$gia = $_POST['giasanpham'];
+		$soluong = $_POST['soluong'];	
+ 		$sql_select_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang WHERE sanpham_id='$sanpham_id'");
+		$count = mysqli_num_rows($sql_select_giohang);
+		if($count>0){
+			$row_sanpham = mysqli_fetch_array($sql_select_giohang);
+			$soluong = $row_sanpham['soluong'] + 1;
+			$sql_giohang = "UPDATE tbl_giohang SET soluong='$soluong' WHERE sanpham_id='$sanpham_id'";
+		}else{
+			$soluong = $soluong;
+			$sql_giohang = "INSERT INTO tbl_giohang(tensanpham,sanpham_id,giasanpham,hinhanh,soluong) values ('$tensanpham','$sanpham_id','$gia','$hinhanh','$soluong')";
 
- 	}
- 	$insert_row = mysqli_query($con,$sql_giohang);
- 	if($insert_row==0){
- 		header('Location:index.php?quanly=chitietsp&id='.$sanpham_id);	
- 	}
+		}
+		$insert_row = mysqli_query($con,$sql_giohang);
+		if($insert_row==0){
+			header('Location:index.php?quanly=chitietsp&id='.$sanpham_id);	
+		}
 	}elseif(isset($_POST['capnhatsoluong'])) {
 		for($i=0; $i<count($_POST['product_id']); $i++) {
 			$sanpham_id = $_POST['product_id'][$i];
@@ -32,6 +32,7 @@
 				$sql_update = mysqli_query($con,"UPDATE tbl_giohang SET soluong='$soluong' WHERE sanpham_id='$sanpham_id'");
 			}
 		}
+		
 	}elseif(isset($_GET['xoa'])){
 		$id = $_GET['xoa'];
 		$sql_delete = mysqli_query($con,"DELETE FROM tbl_giohang WHERE giohang_id='$id'");
@@ -102,7 +103,7 @@
 		<?php
 			$sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
 		?>
-		<div class="table-responsive">
+		<div class="table-responsive hide-on-mobile">
 			<form action="" method="POST">
 				<table class="timetable_sub">
 					<thead>
@@ -141,9 +142,7 @@
 								<a class="xoagiohang" href="?quanly=giohang&xoa=<?php echo $row_fetch_giohang['giohang_id'] ?>">Xóa</a>
 							</td>
 						</tr>
-						<?php
-						} 
-						?>
+						<?php } ?>
 						<tr>
 							<td colspan="7">Tổng tiền : <?php echo number_format($total).'vnđ' ?></td>
 
@@ -151,17 +150,14 @@
 						<tr>
 							<td colspan="7"><input type="submit" class="btn-success" value="Cập nhật giỏ hàng" name="capnhatsoluong">
 							<?php 
-							$sql_giohang_select = mysqli_query($con,"SELECT * FROM tbl_giohang");
-							$count_giohang_select = mysqli_num_rows($sql_giohang_select);
-
-							if(isset($_SESSION['dangnhap_home']) && $count_giohang_select>0){
-								while($row_1 = mysqli_fetch_array($sql_giohang_select)){
+								$sql_giohang_select = mysqli_query($con,"SELECT * FROM tbl_giohang");
+								$count_giohang_select = mysqli_num_rows($sql_giohang_select);
+								if(isset($_SESSION['dangnhap_home']) && $count_giohang_select>0){
+									while($row_1 = mysqli_fetch_array($sql_giohang_select)){
 							?>
 								<input type="hidden" name="thanhtoan_product_id[]" value="<?php echo $row_1['sanpham_id'] ?>">
 								<input type="hidden" name="thanhtoan_soluong[]" value="<?php echo $row_1['soluong'] ?>">
-							<?php 
-								}
-							?>
+							<?php } ?>
 							<tr>
 								<td colspan="7">
 									<input type="submit" class="btn btn-primary" value="Thanh toán giỏ hàng" name="thanhtoandangnhap">
@@ -177,9 +173,14 @@
 				</table>
 			</form>
 		</div>
+
+		<div class="checkout-mobile show-on-mobile">
+		
+		</div>
 	</div>
+
 	<?php
-	if(!isset($_SESSION['dangnhap_home'])){ 
+		if(!isset($_SESSION['dangnhap_home'])){ 
 	?>
 	<div class="checkout-left">
 		<div class="address_form_agile mt-sm-5 mt-4">
@@ -229,7 +230,7 @@
 						<?php
 						} 
 						?>
-						<input type="submit" name="thanhtoan" class="btn-success" style="width: 20%" value="Thanh toán">
+						<input type="submit" name="thanhtoan" class="btn-success" value="Thanh toán">
 						
 					</div>
 				</div>

@@ -11,16 +11,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./assets/css/sp.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="sass.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+
 </head>
-<body>
+<body class="wrapper">
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+           <input type="checkbox" id="checkbox" />
+           <div class="slider round"></div>
+        </label>
+     </div>
+      <script>
+         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+ const currentTheme = localStorage.getItem('theme');
+ if (currentTheme) {
+     document.documentElement.setAttribute('data-theme', currentTheme);
+     if (currentTheme === 'dark') {
+         toggleSwitch.checked = true;
+     }
+ }
+ function switchTheme(e) {
+     if (e.target.checked) {
+         document.documentElement.setAttribute('data-theme', 'dark');
+         localStorage.setItem('theme', 'dark');
+     } else {
+         document.documentElement.setAttribute('data-theme', 'light');
+         localStorage.setItem('theme', 'light');
+     }
+ }
+ toggleSwitch.addEventListener('change', switchTheme);
+      </script>
     <section class="baiviet">
         <ol class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-            <a itemprop="item" href="./"><span itemprop="name">Trang chủ</span></a>
-            <meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="?quanly=tatcasp"><span itemprop="name">Bài viết</span></a><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href=""><span itemprop="name">Hướng dẫn giải Rubik 2x2x2 chỉ trong 2 phút</span></a><meta itemprop="position" content="3"></li>
+            <a itemprop="item" href="./"><span itemprop="name" class="color">Trang chủ</span></a>
+            <meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="?quanly=tatcasp"><span itemprop="name" class="color">Bài viết</span></a><meta itemprop="position" content="2"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href=""><span itemprop="name" class="color">Hướng dẫn giải Rubik 2x2x2 chỉ trong 2 phút</span></a><meta itemprop="position" content="3"></li>
         </ol>
         <article>
-            <h1 class="titledetail">Hướng dẫn giải Rubik 2x2x2 chỉ trong 2 phút</h1>
+            <h1 class="titledetail title">Hướng dẫn giải Rubik 2x2x2 chỉ trong 2 phút</h1>
                 <p style="font-weight: 700">cách xoay rubik 2x2x2, cách chơi rubik 2x2, hướng dẫn xoay rubik 2x2, hướng dẫn giải rubik 2x2</p>
             <div class="article_content">
             <h2>&nbsp;</h2>

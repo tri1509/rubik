@@ -4,7 +4,7 @@
 	}else{
 		$id = '';
 	}
-	$sql_cate = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");	
+	$sql_cate = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");
 	$sql_category = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");
 	$row_title = mysqli_fetch_array($sql_category);
 	$title = $row_title['category_name'];
@@ -27,14 +27,15 @@
                 while($row_sanpham = mysqli_fetch_array($sql_cate)){ 
             ?>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">
-                    <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_sanpham['sanpham_name'] ; ?>">
+                    <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id']?>" class="home-product__danhmuc-link" title="<?php echo $row_sanpham['sanpham_name']?>">
                         <div class="home-product__danhmuc">
-                            <div class="home-product__danhmuc-img"><img src="./img/<?php echo $row_sanpham['hinh']; ?>" alt="" width="100%" height="auto"></div>
-                            
-                            <h4 class="home-product__item-name"><?php echo $row_sanpham['sanpham_name'] ; ?></h4>
+                            <div class="home-product__danhmuc-img">
+                                <img src="./img/<?php echo $row_sanpham['hinh']?>" alt="" width="90%" height="auto">
+                            </div>
+                            <h4 class="home-product__item-name"><?php echo $row_sanpham['sanpham_name']?></h4>
                             <div class="home-product__item-price">
-                                <span class="home-product__item-price-old"><?php echo number_format($row_sanpham['sanpham_gia'])."đ" ; ?></span>
-                                <span class="home-product__item-price-new"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai'])."đ" ; ?></span>
+                                <span class="home-product__item-price-old"><?php echo number_format($row_sanpham['sanpham_gia'])."đ"?></span>
+                                <span class="home-product__item-price-new"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai'])."đ"?></span>
                             </div>
                             <form action="?quanly=giohang" method="post">
                                 <fieldset>

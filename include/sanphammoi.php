@@ -1,4 +1,5 @@
 <?php
+    $sql_sanphammoi = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_moi='1' ORDER BY category_id DESC");
     while($row_sanphammoi = mysqli_fetch_array($sql_sanphammoi)) {
 ?>
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-6">

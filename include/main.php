@@ -1,8 +1,3 @@
-<?php
-    $sql_sanphamnoibat = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_noibat='1' ORDER BY category_id DESC");
-    $sql_sanphambanchay = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_banchay='1' ORDER BY category_id DESC");
-    $sql_sanphammoi = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_moi='1' ORDER BY category_id DESC");
-?>
 <div class="row">
     <div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-12">
         <div class="home-hotline">
@@ -78,7 +73,7 @@
     <h2 id="moi">
         <i class="fa-solid fa-cubes"></i>
         Sản Phẩm Mới
-        <img src="./img/New.gif" alt="">
+        <img src="./img/New.gif" alt="" style="margin-bottom:10px">
     </h2>
 
     <div class="home-product">
