@@ -93,7 +93,7 @@
 
 	<?php 
 	if(isset($_SESSION['dangnhap_home'])){
-		echo '<p style="color:#000;font-size:1.6rem;">Xin chào bạn: '.$_SESSION['dangnhap_home'].'<i>|</i><a href="index.php?quanly=giohang&dangxuat=1" style="color:#6a5af9;font-size:1.7rem;">Đăng xuất</a></p>';
+		echo '<p style="color:#000;font-size:1.6rem;">Xin chào bạn: <span style="color: #004993;font-size: 1.5rem;font-weight: 800;">'.$_SESSION['dangnhap_home'].' </span><i> | </i><a href="index.php?quanly=giohang&dangxuat=1" style="color:#6a5af9;font-size:1.7rem;">Đăng xuất</a></p>';
 	}else{
 		echo "<i class='chuadangnhap'>(Hãy đăng nhập để nhận nhiều ưu đãi hơn)</i>";
 	}
@@ -103,18 +103,18 @@
 		<?php
 			$sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
 		?>
-		<div class="table-responsive hide-on-mobile">
+		<div class="table-responsive">
 			<form action="" method="POST">
 				<table class="timetable_sub">
 					<thead>
 						<tr>
-							<th>Thứ tự</th>
-							<th>Sản phẩm</th>
-							<th>Số lượng</th>
-							<th>Tên sản phẩm</th>
-							<th>Giá</th>
-							<th>Giá tổng</th>
-							<th>Quản lý</th>
+							<th scope="col">STT</th>
+							<th scope="col">Sản phẩm</th>
+							<th scope="col">SL</th>
+							<th scope="col">Tên hàng</th>
+							<th scope="col">Giá</th>
+							<th scope="col">Giá tổng</th>
+							<th scope="col">QL</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -127,28 +127,31 @@
 							$i++;
 						?>
 						<tr class="rem1">
-							<td class="invert"><?php echo $i ?></td>
+							<td class="invert" data-label="sp số :" scope="row"><?php echo $i ?></td>
 							<td class="invert-image">
 								<img src="./img/<?php echo $row_fetch_giohang['hinhanh']?>" alt="" width="120" height="auto">
 							</td>
-							<td class="invert">
+							<td class="invert" data-label="số lượng :" >
 								<input type="hidden" name="product_id[]" value="<?php echo $row_fetch_giohang['sanpham_id'] ?>">
-								<input type="number" min="1" name="soluong[]" value="<?php echo $row_fetch_giohang['soluong'] ?>">
+								<div class="buttons_added">
+									<input class="minus is-form" type="button" value="-">
+									<input aria-label="quantity" class="input-qty" max="100" min="1" type="number" name="soluong[]" value="<?php echo $row_fetch_giohang['soluong'] ?>">
+									<input class="plus is-form" type="button" value="+">
+								</div>
 							</td>
-							<td class="invert"><?php echo $row_fetch_giohang['tensanpham'] ?></td>
-							<td class="invert"><?php echo number_format($row_fetch_giohang['giasanpham']).' vnđ' ?></td>
-							<td class="invert"><?php echo number_format($subtotal).' vnđ' ?></td>
+							<td class="invert" data-label="tên sản phẩm :"><?php echo $row_fetch_giohang['tensanpham'] ?></td>
+							<td class="invert" data-label="giá :"><?php echo number_format($row_fetch_giohang['giasanpham'])." ₫" ?></td>
+							<td class="invert" data-label="giá tổng :"><?php echo number_format($subtotal)." ₫" ?></td>
 							<td class="invert">
 								<a class="xoagiohang" href="?quanly=giohang&xoa=<?php echo $row_fetch_giohang['giohang_id'] ?>">Xóa</a>
 							</td>
 						</tr>
 						<?php } ?>
 						<tr>
-							<td colspan="7">Tổng tiền : <?php echo number_format($total).'vnđ' ?></td>
-
+							<td colspan="7" class="invert tudo">Tổng tiền : <span><?php echo number_format($total).'vnđ' ?></span></td>
 						</tr>
 						<tr>
-							<td colspan="7"><input type="submit" class="btn-success" value="Cập nhật giỏ hàng" name="capnhatsoluong">
+							<td colspan="7" class="tudo"><input type="submit" class="btn-success" value="Cập nhật giỏ hàng" name="capnhatsoluong" onclick="capnhat()">
 							<?php 
 								$sql_giohang_select = mysqli_query($con,"SELECT * FROM tbl_giohang");
 								$count_giohang_select = mysqli_num_rows($sql_giohang_select);
@@ -159,8 +162,8 @@
 								<input type="hidden" name="thanhtoan_soluong[]" value="<?php echo $row_1['soluong'] ?>">
 							<?php } ?>
 							<tr>
-								<td colspan="7">
-									<input type="submit" class="btn btn-primary" value="Thanh toán giỏ hàng" name="thanhtoandangnhap">
+								<td colspan="7" class="tudo">
+									<input type="submit" class="btn btn-primary" value="Thanh toán giỏ hàng" name="thanhtoandangnhap" onclick="thanhtoan()">
 								</td>
 							</tr>
 							
@@ -173,11 +176,15 @@
 				</table>
 			</form>
 		</div>
-
-		<div class="checkout-mobile show-on-mobile">
-		
-		</div>
 	</div>
+	<script>
+		function capnhat() {
+		alert("Đã cập nhật giỏ hàng\nBấm OK để tiếp tục mua hàng");
+		};
+		function thanhtoan() {
+		alert("Đã thanh toán giỏ hàng\nVào đơn hàng để xem thông tin");
+		}
+	</script>
 
 	<?php
 		if(!isset($_SESSION['dangnhap_home'])){ 
@@ -241,4 +248,24 @@
 	} 
 	?>
 </div>
-	
+
+<script>
+	$('input.input-qty').each(function() {
+var $this = $(this),
+    qty = $this.parent().find('.is-form'),
+    min = Number($this.attr('min')),
+    max = Number($this.attr('max'))
+if (min == 0) {
+    var d = 0
+} else d = min
+$(qty).on('click', function() {
+    if ($(this).hasClass('minus')) {
+    if (d > min) d += -1
+    } else if ($(this).hasClass('plus')) {
+    var x = Number($this.val()) + 1
+    if (x <= max) d += 1
+    }
+    $this.attr('value', d).val(d)
+})
+})
+</script>

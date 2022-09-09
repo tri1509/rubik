@@ -22,7 +22,7 @@
 <div class="row donhang">
 	<?php
 		if(isset($_SESSION['dangnhap_home'])){
-			echo 'Đơn hàng : '.$_SESSION['dangnhap_home'];
+			echo '<p style="color:#000;font-size:1.6rem;">Đơn hàng : <span style="color: #004993;font-size: 1.5rem;font-weight: 800;">' .$_SESSION['dangnhap_home'].'</span></p>';
 		} 
 	?>
 	<div class="col-xl-12 col-md-12 col-12">
@@ -34,26 +34,28 @@
 			}
 			$sql_select = mysqli_query($con,"SELECT * FROM tbl_giaodich WHERE tbl_giaodich.khachhang_id='$id_khachhang' GROUP BY tbl_giaodich.magiaodich"); 
 		?> 
-		<table class="table table-bordered">
-			<tr>
-				<th>Thứ tự</th>
-				<th>Mã giao dịch</th>
-				<th>Ngày đặt</th>
-				<th>Quản lý</th>
-				<th>Tình trạng</th>
-				<th>Yêu cầu</th>
-			</tr>
+		<table class="table table-hover timetable_sub">
+			<thead>
+				<tr>
+					<th scope="col">Thứ tự</th>
+					<th scope="col">Mã giao dịch</th>
+					<th scope="col">Ngày đặt</th>
+					<th scope="col">Quản lý</th>
+					<th scope="col">Tình trạng</th>
+					<th scope="col">Yêu cầu</th>
+				</tr>
+			</thead>
 			<?php
 				$i = 0;
 				while($row_donhang = mysqli_fetch_array($sql_select)){ 
 					$i++;
 			?> 
 			<tr>
-				<td><?php echo $i; ?></td>
-				<td><?php echo $row_donhang['magiaodich']; ?></td>
-				<td><?php echo $row_donhang['ngaythang'] ?></td>
+				<td data-label="đơn hàng số :"><?php echo $i ?></td>
+				<td data-label="mã giao dịch :"><?php echo $row_donhang['magiaodich']; ?></td>
+				<td data-label="ngày đặt :"><?php echo $row_donhang['ngaythang'] ?></td>
 				<td><a style="color:#007bff" href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>&magiaodich=<?php echo $row_donhang['magiaodich'] ?>">Xem chi tiết</a></td>
-				<td>
+				<td data-label="tình trạng :">
 					<?php 
 						if($row_donhang['tinhtrangdon']==0){
 							echo 'Đã đặt hàng';
@@ -62,7 +64,7 @@
 						}
 					?>
 				</td>
-				<td>
+				<td data-label="yêu cầu :">
 					<?php
 						if($row_donhang['huydon']==0){ 
 					?>
@@ -94,7 +96,7 @@
 	</div>
 
 	<div class="col-xl-12 col-md-12 col-12">
-		<p>Chi tiết đơn hàng</p><br>
+		<h4 class="chitiet-khac">Chi tiết đơn hàng</h4><br>
 		<?php
 		if(isset($_GET['magiaodich'])){
 			$magiaodich = $_GET['magiaodich'];
@@ -103,25 +105,27 @@
 		}
 		$sql_select = mysqli_query($con,"SELECT * FROM tbl_giaodich,tbl_khachhang,tbl_sanpham WHERE tbl_giaodich.sanpham_id=tbl_sanpham.sanpham_id AND tbl_khachhang.khachhang_id=tbl_giaodich.khachhang_id AND tbl_giaodich.magiaodich='$magiaodich' ORDER BY tbl_giaodich.giaodich_id DESC"); 
 		?> 
-		<table class="table table-bordered ">
-			<tr>
-				<th>Thứ tự</th>
-				<th>Mã giao dịch</th>
-				<th>Tên sản phẩm</th>
-				<th>Số lượng</th>
-				<th>Ngày đặt</th>
-			</tr>
+		<table class="table table-hover ">
+			<thead>
+				<tr>
+					<th scope="col">Thứ tự</th>
+					<th scope="col">Mã giao dịch</th>
+					<th scope="col">Tên sản phẩm</th>
+					<th scope="col">Số lượng</th>
+					<th scope="col">Ngày đặt</th>
+				</tr>
+			</thead>
 			<?php
 				$i = 0;
 				while($row_donhang = mysqli_fetch_array($sql_select)){ 
 					$i++;
 			?> 
 			<tr>
-				<td><?php echo $i; ?></td>
-				<td><?php echo $row_donhang['magiaodich']; ?></td>
-				<td><?php echo $row_donhang['sanpham_name']; ?></td>
-				<td><?php echo $row_donhang['soluong']; ?></td>
-				<td><?php echo $row_donhang['ngaythang'] ?></td>
+				<td data-label="thứ tự :"><?php echo $i; ?></td>
+				<td data-label="mã gd :"><?php echo $row_donhang['magiaodich']; ?></td>
+				<td data-label="tên sp :"><?php echo $row_donhang['sanpham_name']; ?></td>
+				<td data-label="số lượng :"><?php echo $row_donhang['soluong']; ?></td>
+				<td data-label="ngày đặt :"><?php echo $row_donhang['ngaythang'] ?></td>
 			</tr>
 			<?php
 				} 

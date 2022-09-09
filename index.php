@@ -33,7 +33,6 @@
 			window.scrollTo(0, 0);
 		}
 	</script>
-    <script src="./assets/js/qc.js" type=text/javascript></script>
 </head>
 <body>
     <?php
@@ -90,28 +89,4 @@
         }, '0');
     });
 </script>
-<!-- <script type="text/javascript">
-function hide_float_left() {
-    var content = document.getElementById('float_content_left');
-    var hide = document.getElementById('hide_float_left');
-    if (content.style.display == "none")
-    {content.style.display = "block"; hide.innerHTML = '<a href="javascript:hide_float_left()">Tắt quảng cáo [X]</a>'; }
-        else { content.style.display = "none"; hide.innerHTML = '<a href="javascript:hide_float_left()">Xem quảng cáo...</a>';
-    }
-    }
-</script>
-<style>
-.float-ck { position: fixed;bottom:0; z-index: 9000}
-* html .float-ck {position:absolute;bottom:auto;top:expression(eval (document.documentElement.scrollTop+document.docum entElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))) ;}
-#float_content_left {border: 1px solid #01AEF0;}
-#hide_float_left {text-align:left; font-size: 11px;}
-#hide_float_left a {background: #01AEF0; padding: 2px 4px; color: #FFF;}
-</style>
-<div class="float-ck" style="left: 0px" >
-    <div id="hide_float_left">
-<a href="javascript:hide_float_left()&index.php">Tắt Quảng Cáo [X]</a></div>
-<div id="float_content_left">
-<img src="./img/qc.png" alt="">
-</div>
-</div> -->
 

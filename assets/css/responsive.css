@@ -1,9 +1,3 @@
-@media screen and (min-width: 1024px) {
-    .adsbygoogle-noablate {
-        display: none;
-    }
-}
-
 /* Mobile và Tablet */ 
 @media only screen and (max-width : 1023px) {
     .hide-on-mobile-tablet {
@@ -13,8 +7,6 @@
     iframe {
         transform: scale(0.9);
     }
-
-
 }
 
 
@@ -349,8 +341,59 @@
         right: 5px;
         top: 35px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        border: transparent;
+    }
+    
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+    }
+
+    table td {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    table td::before {
+        content: attr(data-label) ;
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #004993;
+        font-size: 1.3rem;
+    }
+
+    table td:first-child {
+        margin-top: 30px;
+    }
+
+    table tr td:last-child {
+        border-bottom: 1px solid #004993;
+    }
+
+    .tudo {
+        margin-top: 0 !important;
+        border: 0;
+        background-color: #dadada;
+    }
 
 }
+
 
 
 /* nhỏ hơn 576px */
@@ -580,8 +623,6 @@
     .dropdown-menu-mobile {
         top: 10px !important;
     }
-
-    
 }
 
 @media only screen and (min-width: 576px) {

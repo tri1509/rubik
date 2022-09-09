@@ -1932,6 +1932,52 @@ border-color: #1c7430;
 box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
 }
 
+.buttons_added {
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+}
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color:#f9f9f9;
+    height:2.2rem;
+    width:1.9rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:4px 0 0 4px;
+}
+.is-form.plus {
+    border-radius:0 4px 4px 0;
+}
+.input-qty {
+    background-color:#fff;
+    height:2.2rem;
+    text-align:center;
+    font-size:1.5rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+
 /*-- checkout form --*/
 
 .address_form_agile h4 {
@@ -2173,18 +2219,17 @@ table.timetable_sub {
 }
 
 .timetable_sub th {
-    background: #000;
+    background: #004993;
     color: #fff;
     font-size: 16px;
     border-right: 1px solid #ded2d2;
-    text-align: center;
     padding: 12px 0;
     letter-spacing: 1px;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 .timetable_sub td {
-    text-align: center;
+    text-align: center !important;
     padding: 7px;
     font-size: 14px;
     color: #212121;
@@ -2197,6 +2242,12 @@ table.timetable_sub {
 td.invert-image a img {
     width: 30%;
     margin: 0 auto;
+}
+
+.invert span {
+    color: #004993;
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .rem {
@@ -2386,15 +2437,6 @@ td.invert-image a img {
     }
 }
 
-.adsbygoogle {
-    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-delay: 0.4s;
-}
-
-.hide {
-    transform: translateY(100%) !important;
-}
-
 @media (hover:hover) {
     .home-product__item:hover {
         transform: translateY(-3px);
@@ -2445,7 +2487,6 @@ td.invert-image a img {
     }
     
 }
-
 
 
 
