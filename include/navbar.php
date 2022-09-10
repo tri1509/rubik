@@ -10,7 +10,7 @@
             <label for="navmobile" class="overlay"></label>
             <div class="mobile-menu show-on-mobile">
                 <h3 class="category__heading">
-                    Danh mục sản phẩm
+                    Các sản phẩm
                 </h3>
                 <label for="navmobile" class="label-close"><i class="btn-close"></i></label>
                 <div class="accordion accordion-mobile" id="accordionPanelsStayOpenExample">
