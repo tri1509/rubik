@@ -6,9 +6,13 @@ transition-delay: 0.2s !important;" data-ad-status="filled" data-anchor-shown="t
         <svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feComponentTransfer in="SourceAlpha" result="TransferredAlpha"><feFuncR type="discrete" tableValues="0.5"></feFuncR><feFuncG type="discrete" tableValues="0.5"></feFuncG><feFuncB type="discrete" tableValues="0.5"></feFuncB></feComponentTransfer><feGaussianBlur in="TransferredAlpha" stdDeviation="2"></feGaussianBlur><feOffset dx="0" dy="0" result="offsetblur"></feOffset><feMerge><feMergeNode></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs>
           <path d="M0,26 L0,6 A6,6 0 0,1 6,1 L50,1 A6,6 0 0,1 56,6 L56,20 A6,6 0 0,0 62,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);" onclick="click()"></path>
           <rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect>
-          <g class="down deg360" stroke="#616161" stroke-width="2px" stroke-linecap="square">
+          <g class="down" id="down" stroke="#616161" stroke-width="2px" stroke-linecap="square">
             <line x1="22" y1="12" x2="28" y2="18"></line>
             <line x1="28" y1="18" x2="34" y2="12"></line>
+          </g>
+          <g class="up" id="up" stroke="#616161" stroke-width="2px" stroke-linecap="square">
+            <line x1="22" y1="18" x2="28" y2="12"></line>
+            <line x1="28" y1="12" x2="34" y2="18"></line>
           </g>
         </svg>
       </span>
@@ -47,16 +51,51 @@ transition-delay: 0.2s !important;" data-ad-status="filled" data-anchor-shown="t
   function click() {
     var tatqc = document.getElementById("qc");
     tatqc.classList.toggle("hide");
-}
+    var tatqc = document.getElementById("footer");
+    tatqc.classList.toggle("tatqc");
+    var down = document.getElementById("down");
+    down.classList.toggle("hide");
+    var up = document.getElementById("up");
+    up.classList.toggle("show");
+};
 </script>
 <style>
   .hide {
       transform: translateY(100%) !important;
   }
 
+  .lineup {
+    transform: rotate(90deg);
+  }
+
+.up {
+  display:none;
+}
+  .up.show {
+    display:block !important;
+  }
+  .down.hide {
+    display:none;
+  }
+
   @media only screen and (max-width : 1023px) {
     #qc {
         display: none !important;
     }
+
+    .footer-cuoi {
+    background-color: #110e0e;
+    position: absolute;
+    height: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateY(100%);
+}
   }
 </style>

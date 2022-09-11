@@ -112,13 +112,13 @@
                     if($row_sanpham['category_id']==$id_category){
             ?>
                 <div class="item">
-                    <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ; ?>" class="home-product__danhmuc-link" title="<?php echo $row_sanpham['sanpham_name'] ; ?>">
+                    <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id']?>" class="home-product__danhmuc-link" title="<?php echo $row_sanpham['sanpham_name']?>">
                         <div class="home-product__danhmuc">
-                            <div class="home-product__danhmuc-img"><img src="./img/<?php echo $row_sanpham['hinh']; ?>" alt="" width="100%" height="auto"></div>
-                            <h4 class="home-product__danhmuc-name"><?php echo $row_sanpham['sanpham_name'] ; ?></h4>
+                            <div class="home-product__danhmuc-img"><img src="./img/<?php echo $row_sanpham['hinh']?>" alt="" width="100%" height="auto"></div>
+                            <h4 class="home-product__danhmuc-name"><?php echo $row_sanpham['sanpham_name']?></h4>
                             <div class="home-product__danhmuc-price">
-                                <span class="home-product__danhmuc-price-new"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai'])."₫" ; ?></span>
-                                <span class="home-product__danhmuc-price-old"><?php echo number_format($row_sanpham['sanpham_gia'])."₫" ; ?></span>
+                                <span class="home-product__danhmuc-price-new"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai'])."₫"?></span>
+                                <span class="home-product__danhmuc-price-old"><?php echo number_format($row_sanpham['sanpham_gia'])."₫"?></span>
                             </div>
                         </div>
                         <div class="promotion clr"><i class="item-span"><i class="fa-solid fa-feather"></i>Freeship đơn hàng từ 500.000 đ</i></div>

@@ -45,7 +45,7 @@
         </div>
     </div>
 </footer>
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="grid wide">
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">

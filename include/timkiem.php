@@ -1,7 +1,7 @@
 <?php
 	if(isset($_POST['search_button'])){
         $tukhoa = $_POST['search_product'];	
-        $sql_timkiem = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' ORDER BY sanpham_id DESC");		
+        $sql_timkiem = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' OR sanpham_mota LIKE '%$tukhoa%' ORDER BY sanpham_id DESC");		
         $title = $tukhoa;
 	}		
 ?> 
@@ -18,7 +18,7 @@
     ?>
         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
             <div class="home-product__item">
-                <a href="?quanly=chitietsp&id=<?php echo $row_timkiem['sanpham_id'] ; ?>">
+                <a href="?quanly=chitietsp&id=<?php echo $row_timkiem['sanpham_id'] ; ?>" title="<?php echo $row_timkiem['sanpham_name'] ; ?>">
                     <div class="home-product__item-img" style="background-image:url(./img/<?php echo $row_timkiem['hinh']; ?>);"></div>
                 </a>
                 <h4 class="home-product__item-name"><?php echo $row_timkiem['sanpham_name'] ; ?></h4>

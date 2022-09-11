@@ -16,9 +16,9 @@
                 <div class="accordion accordion-mobile" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header category__iteam-active" id="panelsStayOpen-headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            <div class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                 Rubik cơ bản
-                            </button>
+                            </div>
                         </h2>
                         <?php
                             while($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)){
@@ -26,16 +26,16 @@
                         ?>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body category__iteam">
-                                <a href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'];?>" class="category__iteam-link">Rubik <?php echo $row_category_danhmuc['category_name'] ?></a>
+                                <a href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'];?>" class="category__iteam-link" style="margin-left:20px">Rubik <?php echo $row_category_danhmuc['category_name'] ?></a>
                             </div>
                         </div>
                         <?php } } ?>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                                 Rubik nâng cao
-                            </button>
+                            </div>
                         </h2>
                         <?php
                             while($row_category_danhmuc2 = mysqli_fetch_array($sql_category_danhmuc2)){
@@ -43,20 +43,20 @@
                         ?>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                             <div class="accordion-body category__iteam">
-                                <a href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc2['category_id'];?>" class="category__iteam-link">Rubik <?php echo $row_category_danhmuc2['category_name'] ?></a>
+                                <a href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc2['category_id'] ?>" class="category__iteam-link" style="margin-left:20px">Rubik <?php echo $row_category_danhmuc2['category_name'] ?></a>
                             </div>
                         </div>
                         <?php } } ?>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                                 Rubik thi đấu
-                            </button>
+                            </div>
                         </h2>
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                             <div class="accordion-body category__iteam">
-                                <a href="#" class="category__iteam-link">Rubik sticker</a>
+                                <a href="#" class="category__iteam-link" style="margin-left:20px">Rubik sticker</a>
                             </div>
                         </div>
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
@@ -97,7 +97,7 @@
         </label>
         <input hidden type="checkbox" name="giohang" id="giohang" class="giohang-mobile-checkbox">
         <label for="giohang" class="overlay2 hide-on-tablet hide-on-pc"></label>
-        <div class="giohang-mobile hide-on-tablet hide-on-pc">
+        <div class="giohang-mobile show-mobile">
             <?php
                 $sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
             ?>
@@ -150,7 +150,7 @@
     <?php
         if(isset($_SESSION['dangnhap_home'])){ 
     ?>
-        <div class="col-3 position-relative grid-mobile-col">
+        <div class="col-4 position-relative grid-mobile-col">
             <div class="dropdown">
                 <div class="dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="span-nav-menu"><?php echo $_SESSION['dangnhap_home'];?></span>
@@ -177,7 +177,7 @@
             </div>
         </div>
 
-        <div class="col-3 position-relative grid-mobile-col">
+        <div class="col-2 position-relative grid-mobile-col">
             <label for="timk" class="nav__input">
                 <i class="fa-solid fa-magnifying-glass look-mobile"></i>
             </label>
@@ -197,18 +197,18 @@
     ?>
         <div class="float-end col-3 position-relative grid-mobile-col">
             <div class="dropdown">
-                <div class="dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="dropdown-toggle" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-user-large nav-mobile-bar"></i>Tài khoản
                 </div>
                 <ul class="dropdown-menu dropdown-menu-mobile" aria-labelledby="dropdownMenu2">
                     <li>
-                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#dangnhap">Đăng nhập</button>
+                        <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#dangnhap">Đăng nhập</button>
                     </li>
                     <li>
-                        <button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#dangky">Đăng ký</button>
+                        <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#dangky">Đăng ký</button>
                     </li>
                     <li>
-                        <button class="dropdown-item" type="button">
+                        <button class="dropdown-item">
                             <a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>" class="user-item-link">
                             Đơn mua</a>
                         </button>
@@ -228,7 +228,7 @@
 
         <div class="col-3 position-relative grid-mobile-col">
             <label for="timk" class="nav__input">
-                <i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm
+                <i class="fa-solid fa-magnifying-glass" style="margin-right:10px"></i>Tìm kiếm
             </label>
             <input type="checkbox" class="nav__input" name="" id="timk" hidden>
             
