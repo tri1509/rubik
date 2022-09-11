@@ -1,9 +1,9 @@
 <?php
 	$sql_header = mysqli_query($con,"SELECT * FROM tbl_header");
     $row_header = mysqli_fetch_array($sql_header);
-    $sql_category = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
-    $sql_category_danhmuc = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
-    $sql_category_danhmuc2 = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
+    $sql_category = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id ASC');
+    $sql_category_danhmuc = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id ASC');
+    $sql_category_danhmuc2 = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id ASC');
 ?>
 
 <nav class="category">

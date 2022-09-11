@@ -4,10 +4,9 @@
 	}else{
 		$id = '';
 	}
-	$sql_cate = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");
-	$sql_category = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");
+	$sql_cate = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id ASC");
+	$sql_category = mysqli_query($con,"SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id ASC");
 	$row_title = mysqli_fetch_array($sql_category);
-	$title = $row_title['category_name'];
 ?>
 
 <div class="row">
@@ -17,7 +16,7 @@
                 <a href="index.php">Trang chủ</a>
             </li>
             <i>|</i>
-            <li>Sản Phẩm <?php echo $title ?></li>
+            <li>Sản Phẩm <?php echo $row_title['category_name'] ?></li>
         </ul>
         <a href="?quanly=tatcasp" class="chitietsp-them">Xem tất cả</a>
     </div>

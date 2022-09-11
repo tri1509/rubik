@@ -26,8 +26,6 @@
 			$soluong = $_POST['soluong'][$i];
 			if($soluong<=0){
 				$sql_delete = mysqli_query($con,"DELETE FROM tbl_giohang WHERE sanpham_id='$sanpham_id'");
-			}elseif(!$_POST['product_id']){
-				echo "ko";
 			}else{
 				$sql_update = mysqli_query($con,"UPDATE tbl_giohang SET soluong='$soluong' WHERE sanpham_id='$sanpham_id'");
 			}

@@ -4,13 +4,19 @@
 	}else{
 		$id = '';
 	}
+    if(isset($_GET['trang'])) {
+        $page = $_GET['trang'];
+    }else {
+        $page = '1';
+    }
+    $sobai = 12;
+    if($page == '' || $page == 1) {
+        $begin = 0;
+    }else{
+        $begin = ($page*$sobai)-$sobai;
+    }
 	$sql_chitiet = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_id='$id'");
-    $sql_spkhac = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY RAND() LIMIT 5,12");
-    $sql_rand = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY RAND() LIMIT 1,75");
-    $row_rand1 = mysqli_fetch_array($sql_rand);
-    $row_rand2 = mysqli_fetch_array($sql_rand);
-    $row_rand3 = mysqli_fetch_array($sql_rand);
-    $row_rand4 = mysqli_fetch_array($sql_rand);
+    $sql_spkhac = mysqli_query($con,"SELECT * FROM tbl_sanpham LIMIT $begin,$sobai");
 ?>
 <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-xs-12 col-12">
@@ -30,16 +36,16 @@
                 <div class="chitiet-container">
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 text-center">
-                            <img src="./img/<?php echo $row_chitiet['hinh']; ?>" alt="" width="100%" height="auto" class="chitiet-img">
+                            <img src="./img/<?php echo $row_chitiet['hinh']?>" alt="" width="100%" height="auto" class="chitiet-img">
                         </div>
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
-                            <p class="chitiet-header"><?php echo $row_chitiet['sanpham_name']; ?></p>
+                            <p class="chitiet-header"><?php echo $row_chitiet['sanpham_name']?></p>
                             <div class="row">
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4 chitiet-giakhuyenmai">
-                                    <?php echo number_format($row_chitiet['sanpham_giakhuyenmai'])." VND"; ?>
+                                    <?php echo number_format($row_chitiet['sanpham_giakhuyenmai'])." VND"?>
                                 </div>
                                 <del class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-xs-4 col-4 chitiet-gia-goc">
-                                    <?php echo number_format($row_chitiet['sanpham_gia'])." VND"; ?>
+                                    <?php echo number_format($row_chitiet['sanpham_gia'])." VND"?>
                                 </del>
                                 <div class="col-xl-5 col-lg-5 col-md-4 col-sm-4 col-xs-4 col-4 vanchuyen">
                                     Miễn phí vận chuyển
@@ -71,6 +77,7 @@
             ?>
     </div>
 </div>
+<!--  
 <section class="chitiet-them hide-on-mobile-tablet">
     <div class="gallery">
         <ul>
@@ -89,7 +96,8 @@
         </ul>
     </div>
 </section>
-<div class="position-relative">
+-->
+<div class="position-relative" style="margin-top:30px">
     <p class="chitiet-khac">Các sản phẩm khác</p>
     <a href="?quanly=tatcasp" class="chitietsp-them">Xem tất cả</a>
 </div>

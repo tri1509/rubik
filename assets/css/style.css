@@ -5,6 +5,7 @@
     --header-height: 120px;        
     --header-nav-mobile:45px;
     --transition-effect:0.25s cubic-bezier(.25,-0.59,.82,1.66);
+    --an_qc:0.8s cubic-bezier(.26,.63,1,.46);
     --link-color: 102, 153, 255;
     --box-shadow:rgba(113, 113, 113, 0.5) 0px 0px 10px;
     --loader-size:12px;
@@ -383,6 +384,7 @@ h3.category__heading a {
     text-align: center;
     line-height: 30px;
     border-radius: 10px;
+    transition: 0.15s;
 }
 
 .pagination-item__link-acctive .pagination-item__link {
@@ -390,8 +392,10 @@ h3.category__heading a {
     color: #fff;
 }
 
-.pagination-item__link-acctive .pagination-item__link:hover {
+.pagination-item__link:hover {
     background-color: rgb(218, 218, 218);
+    transform: scale(1.2);
+    color: #f53e2d;
 }
 
 .home-product__pagination {
@@ -1477,7 +1481,7 @@ h5 {
     margin-bottom: 95px;
     min-height: 500px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    transition: var(--an_qc) !important;
     transition-delay: 0.2s !important;
 }
 
@@ -1803,8 +1807,8 @@ h2.footer-top-head-w3l {
 }
 
 .chitiet-them {
-    margin-top: 100px;
-    width: 111%;
+    margin-top: 50px;
+    width: 100%;
     min-height: 150px;
 }
 

@@ -8,7 +8,7 @@
                     Rubik cơ bản
                     <ul class="categories-list categories-list-one">
                     <?php
-                        $sql_category_danhmuc = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
+                        $sql_category_danhmuc = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id ASC');
                         while($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)){
                             if($row_category_danhmuc['category_id']<=9){
                     ?>
@@ -19,7 +19,7 @@
                 <li class="hassub hassup-two"><span></span><i class="icon-categories fa-solid fa-table-cells"></i>Rubik nâng cao
                     <ul class="categories-list categories-list-two">
                     <?php
-                        $sql_category_danhmuc2 = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id DESC');
+                        $sql_category_danhmuc2 = mysqli_query($con,'SELECT * FROM tbl_category ORDER BY category_id ASC');
                         while($row_category_danhmuc2 = mysqli_fetch_array($sql_category_danhmuc2)){
                             if($row_category_danhmuc2['category_id'] > 9) {
                     ?>
@@ -99,7 +99,7 @@
         </div>
             
     <?php
-        $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id DESC");
+        $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id ASC");
         while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
             $id_category = $row_cate_home['category_id'];
     ?>
@@ -107,7 +107,7 @@
             <p class="main-header" id="<?php echo $id_category ?>">Rubik <?php echo $row_cate_home['category_name'] ?></p>
             <div class="owl-carousel owl-carousel-sp owl-theme container-owl-theme ">
             <?php
-                $sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
+                $sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY sanpham_id ASC");
                 while($row_sanpham = mysqli_fetch_array($sql_product)) {
                     if($row_sanpham['category_id']==$id_category){
             ?>

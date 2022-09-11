@@ -1,7 +1,7 @@
 <div class="carousel-r2">
     <div class="owl-carousel owl-theme">
         <?php
-            $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id DESC");
+            $sql_cate_home = mysqli_query($con,"SELECT * FROM tbl_category ORDER BY category_id ASC");
             while($row_cate_home = mysqli_fetch_array($sql_cate_home)){
                 $id_category = $row_cate_home['category_id'];
                 if($row_cate_home['category_id']>9){
@@ -12,7 +12,7 @@
                         Rubik <?php echo $row_cate_home['category_name'] ?>
                     </h3>
                     <?php
-                        $sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
+                        $sql_product = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY sanpham_id ASC");
                         while($row_sanpham = mysqli_fetch_array($sql_product)) {
                             if($row_sanpham['category_id']==$id_category){
                     ?>

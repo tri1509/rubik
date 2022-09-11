@@ -425,9 +425,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
+    padding: 0 30px;
     border: none;
     font: normal 40px/normal "Dynalight", Helvetica, sans-serif;
-    color: rgba(255,255,255,1);
+    color: #fff;
     text-decoration: normal;
     text-align: center;
     line-height:var(--header-height) ;

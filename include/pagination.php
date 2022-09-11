@@ -1,3 +1,8 @@
+<?php 
+    $sql_trang = mysqli_query($con,"SELECT * FROM tbl_sanpham");
+    $row_count = mysqli_num_rows($sql_trang);
+    $trang = ceil($row_count/$sobai);
+?>
 <ul class="pagination home-product__pagination">
     <li class="pagination-item">
         <a href="" class="pagination-item__link">
@@ -5,49 +10,17 @@
         </a>
     </li>
 
-    <li class="pagination-item pagination-item__link-acctive">
-        <a href="" class="pagination-item__link">
-            1
+    <?php
+        for($i=1;$i<=$trang;$i++) {
+    ?>
+
+    <li class="pagination-item pagination-item__link-<?php if ($i == $page) { echo "acctive"; } ?> ">
+        <a href="?quanly=chitietsp&trang=<?php echo $i ?>" class="pagination-item__link">
+            <?php echo $i ?>
         </a>
     </li>
 
-    <li class="pagination-item">
-        <a href="" class="pagination-item__link">
-            2
-        </a>
-    </li>
-
-    <li class="pagination-item">
-        <a href="" class="pagination-item__link">
-            3
-        </a>
-    </li>
-
-    
-    <li class="pagination-item hide-on-mobile">
-        <a href="" class="pagination-item__link">
-            4
-        </a>
-    </li>
-    
-    <li class="pagination-item hide-on-mobile">
-        <a href="" class="pagination-item__link">
-            5
-        </a>
-    </li>
-
-    <li class="pagination-item">
-        <a href="" class="pagination-item__link">
-            ...
-        </a>
-    </li>
-
-    <li class="pagination-item">
-        <a href="" class="pagination-item__link">
-            14
-        </a>
-    </li>
-
+    <?php } ?>
     <li class="pagination-item">
         <a href="" class="pagination-item__link">
             <i class="fa-solid fa-chevron-right"></i>

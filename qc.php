@@ -1,4 +1,4 @@
-<ins id="qc" class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status=".displayed dismissed" style="display: block; width: 100% !important; height: 95px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 100; background: rgb(250, 250, 250) !important; transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+<ins id="qc" class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status=".displayed dismissed" style="display: block; width: 100% !important; height: 95px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 100; background: rgb(250, 250, 250) !important; transition: var(--an_qc) !important;
 transition-delay: 0.2s !important;" data-ad-status="filled" data-anchor-shown="true">
   <div class="grippy-host">
     <ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px !important;">
@@ -54,10 +54,14 @@ transition-delay: 0.2s !important;" data-ad-status="filled" data-anchor-shown="t
     var tatqc = document.getElementById("footer");
     tatqc.classList.toggle("tatqc");
     var down = document.getElementById("down");
-    down.classList.toggle("hide");
+    setTimeout(() => {
+      down.classList.toggle("hide");
+    }, 1000);
     var up = document.getElementById("up");
-    up.classList.toggle("show");
-};
+    setTimeout(() => {
+      up.classList.toggle("show");
+    }, 1000);
+  };
 </script>
 <style>
   .hide {

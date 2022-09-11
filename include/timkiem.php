@@ -1,7 +1,7 @@
 <?php
 	if(isset($_POST['search_button'])){
         $tukhoa = $_POST['search_product'];	
-        $sql_timkiem = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' OR sanpham_mota LIKE '%$tukhoa%' ORDER BY sanpham_id DESC");		
+        $sql_timkiem = mysqli_query($con,"SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' OR sanpham_mota LIKE '%$tukhoa%' ORDER BY sanpham_id ASC");		
         $title = $tukhoa;
 	}		
 ?> 

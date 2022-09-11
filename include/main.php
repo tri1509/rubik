@@ -75,15 +75,40 @@
         Sản Phẩm Mới
         <img src="./img/New.gif" alt="" style="margin-bottom:10px">
     </h2>
-
+    
     <div class="home-product">
         <div class="row">
             <?php
                 include('include/sanphammoi.php');
                 // include('include/pagination.php');
-            ?>
+                ?>
         </div>
     </div>
+<?php 
+    $sql_rand = mysqli_query($con,"SELECT * FROM tbl_sanpham ORDER BY RAND() LIMIT 1,75");
+    $row_rand1 = mysqli_fetch_array($sql_rand);
+    $row_rand2 = mysqli_fetch_array($sql_rand);
+    $row_rand3 = mysqli_fetch_array($sql_rand);
+    $row_rand4 = mysqli_fetch_array($sql_rand);
+?>
+    <section class="chitiet-them hide-on-mobile-tablet">
+        <div class="gallery">
+            <ul>
+                <li>
+                    <a href="?quanly=chitietsp&id=<?php echo $row_rand1['sanpham_id'] ; ?>"><img src="./img/<?php echo $row_rand1['hinh'] ?>"></a>
+                </li>
+                <li>
+                    <a href="?quanly=chitietsp&id=<?php echo $row_rand2['sanpham_id'] ; ?>"><img src="./img/<?php echo $row_rand2['hinh'] ?>"></a>
+                </li>
+                <li>
+                    <a href="?quanly=chitietsp&id=<?php echo $row_rand3['sanpham_id'] ; ?>"><img src="./img/<?php echo $row_rand3['hinh'] ?>"></a>
+                </li>
+                <li>
+                    <a href="?quanly=chitietsp&id=<?php echo $row_rand4['sanpham_id'] ; ?>"><img src="./img/<?php echo $row_rand4['hinh'] ?>"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </div>
 
 
